@@ -34,12 +34,16 @@ function addDarkClass() {
     $(".bg-light").addClass('bg-dark').removeClass("bg-light");
     $(".text-light").addClass('text-dark').removeClass("text-light");
     $(".navbar-light").addClass('navbar-dark').removeClass("navbar-light");
+    $(".btn-dark").addClass('btn-light').removeClass("btn-dark");
+   
 }
 
 function addLightClass() {
     $(".bg-dark").addClass('bg-light').removeClass("bg-dark");
     $(".text-dark").addClass('text-light').removeClass("text-dark");
     $(".navbar-dark").addClass('navbar-light').removeClass("navbar-dark");
+    $(".btn-light").addClass('btn-dark').removeClass("btn-light");
+   
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
@@ -48,5 +52,12 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 //      Pre-Loader
 //  ==================
 $(window).on('load', function(){
-  $('#loading-mask').fadeOut(1000);
+  $('#loading-mask').fadeOut(3000);
 });
+
+//  ==================
+//      Pre-Loader
+//  ==================
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
