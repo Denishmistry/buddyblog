@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600');
 /* Font*/
-/*  font-family: 'Noto Sans', sans-serif; */
-/*   font-family: 'Roboto', sans-serif;  */
+/* font-family: 'Inter', sans-serif; */
+
 /* Font*/
+
+
 
 /* ====================
     Pre loader 
@@ -106,36 +108,78 @@
 /* ====================
       Root css
 ======================= */
-:root {
-    --bs-white: #fff;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-body-color: #212529;
-    --bs-body-bg: #fff;
-}
+
 
 
 :root {
-
-    --font-color: #424242;
+    --font-color: #151618;
     --bg-color: #fff;
+    --alt-bg:#f2f0f2;
 
 }
 
 [data-theme="dark"] {
 
+
+    --bs-light-rgb: 33, 37, 41;
+    --bs-dark-rgb: 40, 41, 62;
+
+
     --font-color: #e7e7e7;
     --bg-color: #1c1c27;
+    --alt-bg:#28293e;
 
-
-    --bs-light-rgb:33,37,41 ;
-    --bs-dark-rgb:40,41,62 ;
 }
 
 
 
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
     color: var(--font-color);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }
+
+/* =======================
+        Boostrap fixes
+========================= */
+
+@media only screen and (min-width:1200px) {
+    .container {
+        max-width: calc(100% - 16vw);
+    }
+}
+
+h1,
+.h1 {
+    font-size: 5rem;
+}
+
+/* ===============
+        Typo
+================== */
+
+.fw-semibold {
+    font-weight: 500;
+}
+
+
+/* Componant */
+
+/* subscribtion */
+.subscribe-form{
+    background: var(--alt-bg);
+    display: inline-block;
+    border-radius: 100px;
+}  
+
+.subscribe-form input{
+    background: transparent;
+    border: 0;
+    padding: 15px 15px;
+}
+
+
