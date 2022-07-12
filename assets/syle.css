@@ -27,6 +27,17 @@
     40% { box-shadow: 0 20px 0 0; }
 }
 
+
+
+/*==========================================================================
+ Custom Scroll with CSS only Supported Browser Chrome, Safari and Firefox 
+ ==========================================================================*/
+* { scrollbar-color: rgba(0, 0, 0, 0.3) #f0edee; scrollbar-width: thin; }
+::-webkit-scrollbar-track { box-shadow: none; -webkit-box-shadow: none; background-color: #f0edee; }
+::-webkit-scrollbar { width: 7px; height: 7px; background-color: transparent; }
+::-webkit-scrollbar-thumb { background-color: #6f6f6f; border-radius: 5px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+ }
 /* ====================
       Root css
 ======================= */
@@ -51,8 +62,38 @@
   --alt-bg-dark:#f2f0f2;
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(229, 229, 229, 0.767) 100%);
 }
-body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--font-color); font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-tap-highlight-color: transparent; }
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--font-color); font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-tap-highlight-color: transparent;cursor: url('images/dot.svg'), auto; }
 
+a,a:hover,button,button:hover,.hover,.hover:hover,label,label:hover {
+    cursor: url('images/dot.svg'), auto !important;
+}
+input,textarea,input:hover,textarea:hover{
+    cursor: url('images/edit.svg'), auto !important;
+}
+
+/* Custom cursor */
+/* https://codepen.io/karlovidek/pen/yvxZjO */
+/* https://codepen.io/snowiewdev/pen/GRMVbpg */
+/* https://blog.hubspot.com/website/animated-cursor */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+ 
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 1000ms, height 1000ms;
+    z-index: 99999999999999;
+}
+
+.cursor.large {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(238, 238, 238, 0.4);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+}
 /* =======================
         Boostrap fixes
 ========================= */
@@ -66,16 +107,25 @@ img,svg{
   height: auto;
 }
 h1,
-.h1 { font-size: 6rem; }
+.h1 { font-size: 4rem; }
 
- input, optgroup, select, textarea{
+ input, optgroup, select, textarea,.form-control{
   color: var(--font-color);
+  background-color: var(--alt-bg);
+  border-color: var(--alt-bg) ;
 }
-
+.form-control:focus {
+    color: var(--font-color);
+    background-color: var(--alt-bg);
+     border-color: var(--alt-bg) ;
+    outline: 0;
+    box-shadow:none;
+}
 .btn{
   position: relative;
   overflow: hidden;
   transition: var(--transition);
+  border-radius: 100px;
 }
 .btn:hover {
   transform: scale(0.97);
@@ -123,7 +173,7 @@ h1,
 
 /* subscribtion */
 .subscribe-form { background: var(--alt-bg); display: inline-block; border-radius: 100px;    font-size: 1.2rem; }
-.subscribe-form input { background: transparent; border: 0; padding: 15px 30px; }
+.subscribe-form input { background: transparent; border: 0; padding: 15px 30px;max-width: 250px; }
 .subscribe-form .btn {
     border-radius: 100px;
     padding: 15px 30px;
@@ -165,3 +215,106 @@ h1,
   object-fit: cover;
   border-radius: 100px;
 }
+
+
+
+/* Navbar */
+
+
+.l-search{
+
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition:all linear 0.6s;
+    z-index: 9999;
+    background:var(--alt-bg);
+    -webkit-transform: scale(0);
+          transform: scale(0);
+          height: 100%;
+          width: 100%;
+}
+.l-search.open{
+    background:var(--bg-color);
+    -webkit-transform: scaleY(0.01) scaleX(0);
+          transform: scaleY(0.01) scaleX(0);
+  -webkit-animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          overflow: auto;
+
+}
+.l-search.close{
+  
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+
+@-webkit-keyframes unfoldIn {
+    0% {
+      -webkit-transform: scaleY(0.005) scaleX(0);
+              transform: scaleY(0.005) scaleX(0);
+      
+    }
+    50% {
+      -webkit-transform: scaleY(0.005) scaleX(1);
+              transform: scaleY(0.005) scaleX(1);
+      
+    }
+    100% {
+      -webkit-transform: scaleY(1) scaleX(1);
+              transform: scaleY(1) scaleX(1);
+              
+    }
+  }
+  
+  @keyframes unfoldIn {
+    0% {
+      -webkit-transform: scaleY(0.005) scaleX(0);
+              transform: scaleY(0.005) scaleX(0);
+    }
+    50% {
+      -webkit-transform: scaleY(0.005) scaleX(1);
+              transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+      -webkit-transform: scaleY(1) scaleX(1);
+              transform: scaleY(1) scaleX(1);
+    }
+  }
+
+  @-webkit-keyframes unfoldOut {
+    0% {
+      -webkit-transform: scaleY(1) scaleX(1);
+              transform: scaleY(1) scaleX(1);
+    }
+    50% {
+      -webkit-transform: scaleY(0.005) scaleX(1);
+              transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+      -webkit-transform: scaleY(0.005) scaleX(0);
+              transform: scaleY(0.005) scaleX(0);
+    }
+  }
+  @keyframes unfoldOut {
+    0% {
+      -webkit-transform: scaleY(1) scaleX(1);
+              transform: scaleY(1) scaleX(1);
+    }
+    50% {
+      -webkit-transform: scaleY(0.005) scaleX(1);
+              transform: scaleY(0.005) scaleX(1);
+    }
+    100% {
+      -webkit-transform: scaleY(0.005) scaleX(0);
+              transform: scaleY(0.005) scaleX(0);
+    }
+  }

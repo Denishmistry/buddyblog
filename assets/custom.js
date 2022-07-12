@@ -61,3 +61,49 @@ $(window).on('load', function(){
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
+
+
+//  ==================
+//    Custom cursor
+//  ==================
+  const cursor = document.querySelector(".cursor");
+  const links = document.querySelectorAll("a , input,textarea,button,.hover,label");
+
+  document.addEventListener("mousemove", (e) => {
+      let leftPosition = e.pageX + 10;
+      let topPosition = e.pageY + 9;
+  
+      cursor.style.left = leftPosition + "px";
+      cursor.style.top = topPosition + "px";
+  })
+  
+  links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+          cursor.classList.add("large");
+      })
+  })
+  
+  links.forEach(link => {
+      link.addEventListener("mouseleave", () => {
+          cursor.classList.remove("large");
+      })
+  })
+  
+  // Animation
+  
+//   navlinks.forEach((li, i) => {
+//       li.style.animationDelay = 0 + i * 140 + "ms";
+//   }) 
+
+
+// Search menu //
+
+$(".search-btn").on('click',function(){
+    $(".l-search").addClass("open");
+    $(".l-search").removeClass("close");
+  
+});
+$(".search-close").on('click',function(){
+    $(".l-search").addClass("close");
+    $(".l-search").removeClass("open");
+});

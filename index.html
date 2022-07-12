@@ -10,7 +10,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+
+  <!-- icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <!-- custom css -->
+  <link rel="stylesheet" href="assets/extanal.css">
+  
   <link rel="stylesheet" href="assets/syle.css">
   <!-- Tile -->
   <title>Hello, world!</title>
@@ -24,16 +30,22 @@
     </div>
   </div>
   <!-- Header section start -->
+  <!-- custom cursor -->
+  <div class="cursor"></div>
+    <!-- custom cursor -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="material-icons material-icons-outlined">
+            search
+            <!-- </span> -->
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -62,6 +74,9 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form> -->
+        <button class="btn btn-dark me-2 search-btn">
+          <span class="material-icons">search</span>
+        </button>
           <div class="d-flex">
 
 
@@ -72,6 +87,7 @@
             </div>
           </div>
         </div>
+        
     </nav>
 
   </header>
@@ -82,7 +98,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="header-title fw-light py-md-5 my-5">
+          <h1 class="header-title fw-light py-md-5 pb-md-4 my-5 hover">
             <span class="fw-bold">Hey, we’re CodeBuddy.</span> See our<br />
             thoughts,stories and ideas.
           </h1>
@@ -134,6 +150,130 @@
   </section>
 
 
+<!-- Search Menu -->
+<div class="l-search">
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+          <button class="btn btn-link search-close" aria-label="Close">
+            <span class="material-icons">close</span>
+         </button>
+        <form class="m-search-form">
+            <fieldset>
+              <span class="material-icons material-icons-outlined">
+                search
+                </span>
+                <input type="text" class="form-control" placeholder="Type to search" aria-label="Type to search">
+              
+            </fieldset>
+        </form>
+        </div>
+    </div>
+  </div>
+
+  <!-- <div class="l-search__content">
+      <div class="l-search__main">
+          <div class="m-search-empty-block as-init-state js-search-init-state">
+              <h3 class="m-search-empty-block__title">
+                  Discover more content...
+              </h3>
+              <img class="m-search-empty-block__illustration" src="assets/images/empty/no-search52ea.svg?v=eae9243c2b" alt="Discover more content...">
+              <p class="m-search-empty-block__description">
+                  Enter some keywords in the search box above, we will do our best to offer you relevant results.
+              </p>
+          </div>
+          <div class="l-search__results js-search-results-container">
+              <h5 class="m-search-label in-search-results">Results</h5>
+              <div class="js-search-results"></div>
+          </div>
+          <div class="m-search-empty-block as-no-results js-search-no-results">
+              <h3 class="m-search-empty-block__title">
+                  We&#x27;re sorry!
+              </h3>
+              <div class="m-search-empty-block__illustration in-no-results">
+                  <img src="assets/images/empty/featured-illustration52ea.svg?v=eae9243c2b" alt="Sorry about that!">
+              </div>
+              <p class="m-search-empty-block__description">
+                  We couldn&#x27;t find any results for your search. Please try again with another keywords.
+              </p>
+          </div>
+      </div>
+      <div class="l-search__sidebar">
+          <div class="l-search__sidebar-sticky">
+              <div class="l-search__sidebar-block">
+                  <h5 class="m-search-label">Recent articles</h5>
+                  <article class="m-recent-article post post-access-public ">
+                      <a href="apps-integrations/index.html" class="m-recent-article__link" aria-label="Apps &amp; integrations">
+                          <div class="m-recent-article__image lozad" data-background-image="content/images/size/w300/2020/03/mike-yukhtenko-hvbIl1XfMlM-unsplash.jpg"></div>
+                          <div class="m-recent-article__info">
+                              <h4 class="m-recent-article__title">Apps &amp; integrations</h4>
+                              <span class="m-recent-article__date">January 14, 2020</span>
+                              <span class="m-access-tag in-recent-post public" data-visibility="public"></span>
+                          </div>
+                      </a>
+                  </article>
+                  <article class="m-recent-article post post-access-public ">
+                      <a href="video-games-playing-with-imagination/index.html" class="m-recent-article__link" aria-label="Video Games Playing With Imagination">
+                          <div class="m-recent-article__image lozad" data-background-image="content/images/size/w300/2020/03/jeshoots-com-eCktzGjC-iU-unsplash.jpg"></div>
+                          <div class="m-recent-article__info">
+                              <h4 class="m-recent-article__title">Video Games Playing With Imagination</h4>
+                              <span class="m-recent-article__date">January 07, 2020</span>
+                              <span class="m-access-tag in-recent-post public" data-visibility="public"></span>
+                          </div>
+                      </a>
+                  </article>
+                  <article class="m-recent-article post post-access-public ">
+                      <a href="pos-hardware-more-options-in-less-space/index.html" class="m-recent-article__link" aria-label="Pos Hardware More Options In Less Space">
+                          <div class="m-recent-article__image lozad" data-background-image="content/images/size/w300/2020/03/davide-boscolo-gz9njd0zYbQ-unsplash.jpg"></div>
+                          <div class="m-recent-article__info">
+                              <h4 class="m-recent-article__title">Pos Hardware More Options In Less Space</h4>
+                              <span class="m-recent-article__date">December 31, 2019</span>
+                              <span class="m-access-tag in-recent-post public" data-visibility="public"></span>
+                          </div>
+                      </a>
+                  </article>
+                  <article class="m-recent-article post post-access-paid last">
+                      <a href="welcome/index.html" class="m-recent-article__link" aria-label="Welcome to Ghost">
+                          <div class="m-recent-article__image lozad" data-background-image="content/images/size/w300/2020/03/allie-smith-I3nD16F56Ko-unsplash.jpg"></div>
+                          <div class="m-recent-article__info">
+                              <h4 class="m-recent-article__title">Welcome to Ghost</h4>
+                              <span class="m-recent-article__date">December 14, 2019</span>
+                              <span class="m-access-tag in-recent-post paid" data-visibility="premium"></span>
+                          </div>
+                      </a>
+                  </article>
+              </div>
+              <div class="l-search__sidebar-block last">
+                  <h5 class="m-search-label">Tags</h5>
+                  <ul class="m-search-tags-list">
+                      <li>
+                          <a href="tag/beauty/index.html" title="Beauty" class="m-tag tag-5e0b18c62c92d9309e25d872 beauty">Beauty</a>
+                      </li>
+                      <li>
+                          <a href="tag/cooking/index.html" title="Cooking" class="m-tag tag-5e0b18c62c92d9309e25d871 cooking">Cooking</a>
+                      </li>
+                      <li>
+                          <a href="tag/getting-started/index.html" title="Getting Started" class="m-tag tag-5df55d5b19553c4df2deaa96 getting-started">Getting Started</a>
+                      </li>
+                      <li>
+                          <a href="tag/motivation/index.html" title="Motivation" class="m-tag tag-5e0b18c62c92d9309e25d870 motivation">Motivation</a>
+                      </li>
+                      <li>
+                          <a href="tag/philosophy/index.html" title="Philosophy" class="m-tag tag-5e0b18c62c92d9309e25d875 philosophy">Philosophy</a>
+                      </li>
+                      <li>
+                          <a href="tag/technology/index.html" title="Technology" class="m-tag tag-5e0b18c62c92d9309e25d873 technology">Technology</a>
+                      </li>
+                      <li>
+                          <a href="tag/travel/index.html" title="Travel" class="m-tag tag-5e0b18c62c92d9309e25d874 travel">Travel</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div> -->
+</div>
+<!-- Search menu -->
 
 
 
