@@ -28,7 +28,6 @@
 }
 
 
-
 /*==========================================================================
  Custom Scroll with CSS only Supported Browser Chrome, Safari and Firefox 
  ==========================================================================*/
@@ -42,57 +41,92 @@
       Root css
 ======================= */
 :root {
+  --cursor:url('images/dot.svg'), auto;
+  --cursor-input:url('images/edit.svg'), auto !important;
   --font-color: #151618;
   --bg-color: #fff;
-  --alt-bg: #f2f0f2;
-  --alt-bg-dark:#151618;
+  --alt-color: #f2f0f2;
+  --alt-color-dark:#151618;
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
- 
- 
- 
   --transition:all ease 0.3s;
+  --cursor:url('images/dot.svg'), auto !important;
+  --cursor-input:url('images/edit.svg'), auto !important;
 }
 
 [data-theme="dark"] {
+  --cursor:url('images/dot-white.svg'), auto !important;
+  --cursor-input:url('images/edit-white.svg'), auto !important;
   --bs-light-rgb: 33, 37, 41;
   --bs-dark-rgb: 40, 41, 62;
   --font-color: #e7e7e7;
   --bg-color: #1c1c27;
-  --alt-bg: #28293e;
-  --alt-bg-dark:#f2f0f2;
+  --alt-color: #28293e;
+  --alt-color-dark:#f2f0f2;
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(229, 229, 229, 0.767) 100%);
 }
-body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--font-color); font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-tap-highlight-color: transparent;cursor: url('images/dot.svg'), auto; }
+body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--font-color); font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-tap-highlight-color: transparent;cursor: none;background-image: url(images/bg.png);    background-attachment: fixed;
+  background-size: cover;}
 
-a,a:hover,button,button:hover,.hover,.hover:hover,label,label:hover {
-    cursor: url('images/dot.svg'), auto !important;
+a,a:hover,button,button:hover,.btn,.btn:hover,.hover,.hover:hover,label,label:hover {
+    cursor: none;
 }
 input,textarea,input:hover,textarea:hover{
-    cursor: url('images/edit.svg'), auto !important;
+    cursor: var(--cursor-input);
 }
+
+
+/* ====================
+      Typography
+======================= */
+
+h1,
+.h1 { font-size: 4rem; }
+
+
+
+
+/* ====================
+         Common
+======================= */
+.section-title{
+  font-size: 2rem;
+  margin-bottom: 20px; 
+}
+
+section{
+  padding: 100px 0 ;
+}
+
 
 /* Custom cursor */
 /* https://codepen.io/karlovidek/pen/yvxZjO */
 /* https://codepen.io/snowiewdev/pen/GRMVbpg */
 /* https://blog.hubspot.com/website/animated-cursor */
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
+.cursor,.arrow-cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
- 
+    background-color:var(--alt-color-dark);
     left: 0;
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: width 1000ms, height 1000ms;
     z-index: 99999999999999;
+
+}
+.populer-block{
+  position: relative;
 }
 
 .cursor.large {
-    height: 40px;
-    width: 40px;
-    background-color: rgba(238, 238, 238, 0.4);
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border:2px solid var(--alt-color-dark);
+    /* background-color: ; */
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+    /* backdrop-filter: invert(1); */
 }
 /* =======================
         Boostrap fixes
@@ -106,18 +140,20 @@ img,svg{
   max-width: 100%;
   height: auto;
 }
-h1,
-.h1 { font-size: 4rem; }
 
  input, optgroup, select, textarea,.form-control{
   color: var(--font-color);
-  background-color: var(--alt-bg);
-  border-color: var(--alt-bg) ;
+  background-color: var(--alt-color);
+  border-color: var(--alt-color) ;
 }
+
+
+
+
 .form-control:focus {
     color: var(--font-color);
-    background-color: var(--alt-bg);
-     border-color: var(--alt-bg) ;
+    background-color: var(--alt-color);
+    border-color: var(--alt-color) ;
     outline: 0;
     box-shadow:none;
 }
@@ -142,6 +178,11 @@ h1,
     -webkit-transform: skewX(-25deg);
     transform: skewX(-25deg);
     animation: shine 3s infinite;
+}
+.btn-transparant{
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 @keyframes shine {0%{left: -75%; } 100% {left: 125%; } }
 /* Button animation */
@@ -172,7 +213,7 @@ h1,
 ================== */
 
 /* subscribtion */
-.subscribe-form { background: var(--alt-bg); display: inline-block; border-radius: 100px;    font-size: 1.2rem; }
+.subscribe-form { background: var(--alt-color); display: inline-block; border-radius: 100px;    font-size: 1.2rem; }
 .subscribe-form input { background: transparent; border: 0; padding: 15px 30px;max-width: 250px; }
 .subscribe-form .btn {
     border-radius: 100px;
@@ -198,7 +239,6 @@ h1,
 .aurther-list a {
   margin-left: -25px;
   position: relative;
-  cursor: pointer;
   display: inline-block;
   transition: var(--transition);
 }
@@ -222,7 +262,6 @@ h1,
 
 
 .l-search{
-
     width: 100%;
     height: 0;
     overflow: hidden;
@@ -233,17 +272,17 @@ h1,
     bottom: 0;
     transition:all linear 0.6s;
     z-index: 9999;
-    background:var(--alt-bg);
+    background:var(--bg-color);
     -webkit-transform: scale(0);
           transform: scale(0);
           height: 100%;
           width: 100%;
 }
 .l-search.open{
-    background:var(--bg-color);
+
     -webkit-transform: scaleY(0.01) scaleX(0);
           transform: scaleY(0.01) scaleX(0);
-  -webkit-animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    -webkit-animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
           animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
           overflow: auto;
 
@@ -317,4 +356,35 @@ h1,
       -webkit-transform: scaleY(0.005) scaleX(0);
               transform: scaleY(0.005) scaleX(0);
     }
+  }
+.l-search{
+  padding: 80px 0;
+}
+  .m-search-form{
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .m-search-form span.material-icons.material-icons-outlined {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      color: var(--alt-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .m-search-form .form-control{
+    background: var(--alt-color-dark);
+    border-radius: 50px;
+    height: 60px;
+    padding-left: 50px;
+    color: var(--alt-color);
+  }
+  button.btn.btn-link.search-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--font-color);
   }

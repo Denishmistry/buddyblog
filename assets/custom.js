@@ -9,14 +9,13 @@ const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
-
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
         addDarkClass();
+    }else {
+        addLightClass();
     }
-} else {
-    addLightClass();
-}
+} 
 
 function switchTheme(e) {
     if (e.target.checked) {
@@ -35,7 +34,8 @@ function addDarkClass() {
     $(".text-light").addClass('text-dark').removeClass("text-light");
     $(".navbar-light").addClass('navbar-dark').removeClass("navbar-light");
     $(".btn-dark").addClass('btn-light').removeClass("btn-dark");
-   
+    $(".text-dark").addClass('text-white').removeClass("text-dark");
+    
 }
 
 function addLightClass() {
@@ -43,6 +43,7 @@ function addLightClass() {
     $(".text-dark").addClass('text-light').removeClass("text-dark");
     $(".navbar-dark").addClass('navbar-light').removeClass("navbar-dark");
     $(".btn-light").addClass('btn-dark').removeClass("btn-light");
+    $(".text-white").addClass('text-dark').removeClass("text-white");
    
 }
 
@@ -52,7 +53,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 //      Pre-Loader
 //  ==================
 $(window).on('load', function(){
-  $('#loading-mask').fadeOut(3000);
+  $('#loading-mask').fadeOut();
 });
 
 //  ==================
@@ -68,11 +69,9 @@ $(function () {
 //  ==================
   const cursor = document.querySelector(".cursor");
   const links = document.querySelectorAll("a , input,textarea,button,.hover,label");
-
-  document.addEventListener("mousemove", (e) => {
+  window.addEventListener("mousemove", (e) => {
       let leftPosition = e.pageX + 10;
       let topPosition = e.pageY + 9;
-  
       cursor.style.left = leftPosition + "px";
       cursor.style.top = topPosition + "px";
   })
@@ -88,7 +87,6 @@ $(function () {
           cursor.classList.remove("large");
       })
   })
-  
   // Animation
   
 //   navlinks.forEach((li, i) => {
@@ -96,14 +94,20 @@ $(function () {
 //   }) 
 
 
-// Search menu //
+//  ==================
+//      Search menu
+//  ==================
 
 $(".search-btn").on('click',function(){
     $(".l-search").addClass("open");
     $(".l-search").removeClass("close");
-  
 });
 $(".search-close").on('click',function(){
     $(".l-search").addClass("close");
     $(".l-search").removeClass("open");
 });
+
+
+
+
+
