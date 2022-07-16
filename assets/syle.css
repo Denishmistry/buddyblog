@@ -9,7 +9,7 @@
 /* ====================
     Pre loader 
 ====================*/
-#loading-mask { position: fixed; width: 100vw; height: 100ch; background: white; z-index: 1000; overflow: hidden; background-color: #000; }
+#loading-mask { position: fixed; width: 100vw; height: 100ch; background: white; z-index: 99999; overflow: hidden; background-color: #000; }
 #loading-mask h1 { text-align: center; color: black; padding-top: 50%; transform: translateY(-50%); }
 #loading-mask .preloader { position: absolute; text-align: center; height: 20px; width: 20px; top: calc(50vh - 10px); left: calc(50vw - 10px); }
 #loading-mask .c-three-dots-loader { position: relative; display: inline-block; width: 20px; height: 20px; border-radius: 50%; animation-fill-mode: both; animation: three-dots-loader-animation 2s infinite ease-in-out; animation-delay: -0.16s; color: #333; }

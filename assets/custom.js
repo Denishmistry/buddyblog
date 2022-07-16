@@ -7,15 +7,21 @@
 const toggleSwitch = document.querySelector('#darkmode');
 const currentTheme = localStorage.getItem('theme');
 
+
+
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
         addDarkClass();
-    }else {
+    }
+    else {
+      
         addLightClass();
     }
+    // console.log("theme set");
 } 
+
 
 function switchTheme(e) {
     if (e.target.checked) {
@@ -43,11 +49,20 @@ function addLightClass() {
     $(".text-dark").addClass('text-light').removeClass("text-dark");
     $(".navbar-dark").addClass('navbar-light').removeClass("navbar-dark");
     $(".btn-light").addClass('btn-dark').removeClass("btn-light");
-    $(".text-white").addClass('text-dark').removeClass("text-white");
-   
+    $(".text-white").addClass('text-dark').removeClass("text-white");   
 }
-
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+$(window).on("load",function(){
+    if(currentTheme===null){
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        setTimeout(() => {
+            addLightClass();
+        }, 1000);
+        // console.log("No theme set");
+    }
+});
 
 //  ==================
 //      Pre-Loader
@@ -93,7 +108,7 @@ $(function () {
             })
         }
 
-
+     
         if(window.innerWidth < 768){
             gsap.utils.toArray(".blogpost  .blogpost_preview").forEach(box => {
                 // gsap.set(box, { scale: 3,
@@ -102,22 +117,16 @@ $(function () {
                    
                     scrollTrigger: {
                          trigger:box,
-                         // pin:box,
+                        //  pin:box,
                          markers: false,  
                          opacity:1,
-                         scrub: 3,
-                         scale: 1,
+                         scrub: 2,
                          toggleClass: "active",
-                         start: "35% 40%", // when the top of the trigger hits the top of the viewport
-                         end: "+=80",
-                        //  end: "400px 300px",
-                         // start: "170% 180%",
-                         // end: "180% 170%",
-                         // transformOrigin:"top"
-                        // end: "top 0px",
+                         start: "0% 45%", // when the top of the trigger hits the top of the viewport
+                         end: "100% 45%",
+                        
                     },
-                  scale: 1,
-                    opacity:1,
+                
                 });
               });
         }
