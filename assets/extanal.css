@@ -96,7 +96,7 @@
 .blogpost_preview.active .small-desc-block {
   height: auto;
   opacity: 1;
-  padding: 0 10px 10px 140px;
+
 }
 .blogpost_preview:hover .blogpost_preview_img,
 .blogpost_preview.active .blogpost_preview_img{
@@ -111,11 +111,13 @@
   position: absolute;
   width: calc(100% + 150px);
   right: -10px;
+  left: -140px;
   background-color: var(--alt-color);
   z-index: 1;
   border-radius: 8px;
-  top: calc(100% - 14px);
-
+  top: calc(100%);
+  transition: var(--transition);
+  padding: 0 10px 10px 140px;
 }
 .excerpt {
   font-size: 0.9rem;
@@ -152,6 +154,8 @@
 .blogpost_preview_txt{
   padding-top: 5px;
   position: relative;
+  height: max-content;
+  width: 100%;
 }
 
 /* end of blog post section */
