@@ -67,26 +67,66 @@ $(function () {
 //  ==================
 //    Custom cursor
 //  ==================
-  const cursor = document.querySelector(".cursor");
-  const links = document.querySelectorAll("a , input,textarea,button,.hover,label");
-  window.addEventListener("mousemove", (e) => {
-      let leftPosition = e.pageX + 10;
-      let topPosition = e.pageY + 9;
-      cursor.style.left = leftPosition + "px";
-      cursor.style.top = topPosition + "px";
-  })
-  
-  links.forEach(link => {
-      link.addEventListener("mouseenter", () => {
-          cursor.classList.add("large");
-      })
-  })
-  
-  links.forEach(link => {
-      link.addEventListener("mouseleave", () => {
-          cursor.classList.remove("large");
-      })
-  })
+    $(window).on('load resize' ,function(){
+        
+        if(window.innerWidth > 1200){
+            $(".catagoty-badge li").addClass("hover");
+            const cursor = document.querySelector(".cursor");
+            const links = document.querySelectorAll("a , input,textarea,button,.hover,label");
+            window.addEventListener("mousemove", (e) => {
+                let leftPosition = e.pageX + 10;
+                let topPosition = e.pageY + 9;
+                cursor.style.left = leftPosition + "px";
+                cursor.style.top = topPosition + "px";
+            })
+        
+            links.forEach(link => {
+                link.addEventListener("mouseenter", () => {
+                    cursor.classList.add("large");
+                })
+            })
+            
+            links.forEach(link => {
+                link.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("large");
+                })
+            })
+        }
+
+
+        if(window.innerWidth < 768){
+            gsap.utils.toArray(".blogpost  .blogpost_preview").forEach(box => {
+                // gsap.set(box, { scale: 3,
+                //     opacity:0,});
+               gsap.to(box, {
+                   
+                    scrollTrigger: {
+                         trigger:box,
+                         // pin:box,
+                         markers: false,  
+                         opacity:1,
+                         scrub: 3,
+                         scale: 1,
+                         toggleClass: "active",
+                         start: "35% 40%", // when the top of the trigger hits the top of the viewport
+                         end: "+=80",
+                        //  end: "400px 300px",
+                         // start: "170% 180%",
+                         // end: "180% 170%",
+                         // transformOrigin:"top"
+                        // end: "top 0px",
+                    },
+                  scale: 1,
+                    opacity:1,
+                });
+              });
+        }
+    });
+    
+    
+
+ 
+   
   // Animation
   
 //   navlinks.forEach((li, i) => {
