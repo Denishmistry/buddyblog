@@ -16,7 +16,7 @@ if (currentTheme) {
 
         addLightClass();
     }
-    // console.log("theme set");
+    console.log("theme set");
 }
 
 function switchTheme(e) {
@@ -56,7 +56,7 @@ $(window).on("load", function () {
         setTimeout(() => {
             addLightClass();
         }, 1000);
-        // console.log("No theme set");
+        console.log("No theme set");
     }
 });
 
@@ -81,7 +81,7 @@ $(function () {
 $(window).on('load resize', function () {
 
     if (window.innerWidth > 1200) {
-        $(".catagoty-badge li").addClass("hover");
+        $(".catagoty-badge li,.blog-post").addClass("hover");
         const cursor = document.querySelector(".cursor");
         const links = document.querySelectorAll("a , input,textarea,button,.hover,label");
         window.addEventListener("mousemove", (e) => {
@@ -143,9 +143,11 @@ $(window).on('load resize', function () {
 
 $(".search-btn").on('click', function () {
     $(".l-search").addClass("open");
+    $("body").addClass("model-open");
     $(".l-search").removeClass("close");
 });
 $(".search-close").on('click', function () {
     $(".l-search").addClass("close");
+    $("body").removeClass("model-open");
     $(".l-search").removeClass("open");
 });

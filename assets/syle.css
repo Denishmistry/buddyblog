@@ -44,9 +44,11 @@
   --cursor:url('images/dot.svg'), auto;
   --cursor-input:url('images/edit.svg'), auto !important;
   --font-color: #151618;
+  --alt-font-color:#f2f0f2;
   --bg-color: #fff;
   --alt-color: #f2f0f2;
   --alt-color-dark:#151618;
+
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
   --transition:all ease 0.3s;
   --cursor:url('images/dot.svg'), auto !important;
@@ -59,9 +61,11 @@
   --bs-light-rgb: 33, 37, 41;
   --bs-dark-rgb: 40, 41, 62;
   --font-color: #e7e7e7;
+  --alt-font-color:#151618;
   --bg-color: #1c1c27;
   --alt-color: #28293e;
   --alt-color-dark:#f2f0f2;
+
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(229, 229, 229, 0.767) 100%);
 }
 body {
@@ -87,11 +91,20 @@ input,textarea,input:hover,textarea:hover{
 /* ====================
       Typography
 ======================= */
-a,a:hover {
+a,a:hover{
+
+}
+
+
+
+.clink{
   color: var(--alt-color-dark);
   text-decoration: none;
 }
-
+.clink:hover {
+  color: var(--alt-color-dark);
+  text-decoration: none;
+}
 .fw-semibold { font-weight: 500; }
 
 
@@ -149,7 +162,7 @@ img.cursor.large {
 /* =======================
         Boostrap fixes
 ========================= */
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width:1600px) {
     .container { max-width: calc(100% - 16vw); }
 }
 
@@ -221,6 +234,9 @@ img,svg{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.small-title {
+  font-size: 1rem;
 }
 /* ===============
    Componanant
@@ -371,6 +387,18 @@ img,svg{
               transform: scaleY(0.005) scaleX(0);
     }
   }
+
+.search-result {
+  position: relative;
+}
+.stickbar{
+  position: sticky;
+  top:0;
+}
+.model-open{
+  overflow: hidden;
+  height: 100vh;
+}
 .l-search{
   padding: 80px 0;
 }
@@ -384,17 +412,17 @@ img,svg{
       left: 15px;
       top: 0;
       bottom: 0;
-      color: var(--alt-color);
+      color: var(--font-color);
       display: flex;
       align-items: center;
       justify-content: center;
   }
   .m-search-form .form-control{
-    background: var(--alt-color-dark);
+    background: var(--alt-color);
     border-radius: 50px;
     height: 60px;
     padding-left: 50px;
-    color: var(--alt-color);
+    color: var(--font-color);
   }
   button.btn.btn-link.search-close {
     position: absolute;
@@ -402,3 +430,16 @@ img,svg{
     top: 20px;
     color: var(--font-color);
   }
+
+  .search-image{
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    text-align: center;
+  }
+.search-image img{
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  object-position: center;
+}
