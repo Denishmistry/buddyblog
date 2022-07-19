@@ -93,6 +93,8 @@
   .blogpost_preview:hover .small-desc-block,
   .blogpost_preview.active .small-desc-block{
     position: static;
+    padding-left: 0;
+    width: 100%;
    
   }
   .small-desc-block {

@@ -16,7 +16,7 @@ if (currentTheme) {
 
         addLightClass();
     }
-    console.log("theme set");
+    // console.log("theme set");
 }
 
 function switchTheme(e) {
@@ -56,7 +56,7 @@ $(window).on("load", function () {
         setTimeout(() => {
             addLightClass();
         }, 1000);
-        console.log("No theme set");
+        // console.log("No theme set");
     }
 });
 
@@ -151,3 +151,6 @@ $(".search-close").on('click', function () {
     $("body").removeClass("model-open");
     $(".l-search").removeClass("open");
 });
+
+
+

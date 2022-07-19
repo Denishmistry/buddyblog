@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600'); */
 
 /* Font*/
 
@@ -106,7 +106,9 @@ a,a:hover{
   text-decoration: none;
 }
 .fw-semibold { font-weight: 500; }
-
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+  color: var(--font-color);
+}
 
 h1,
 .h1 { font-size: 4rem; }
@@ -118,7 +120,10 @@ h1,
   font-size: 2rem;
   margin-bottom: 20px; 
 }
-
+.section-title-large{
+  font-size: 3rem;
+  margin-bottom: 20px; 
+}
 section{
   padding: 100px 0 ;
 }
@@ -141,7 +146,7 @@ section{
     z-index: 99999999999999;
 
 }
-.populer-block{
+.recent-post{
   position: relative;
 }
 
