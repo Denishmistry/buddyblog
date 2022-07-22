@@ -312,11 +312,28 @@
   background: var(--alt-color);
   position: absolute;
   left: -11px;
-  top: -5px;
+  top: 0;
+  bottom: 0;
   border-radius: 30px;
   z-index: -1;
   transition: var(--transition);
+  margin: auto;
 }
 .read-more:hover:before {
   width: calc(100% + 24px);
 }
+
+
+/* Tags / catagory */
+
+.blog-post.with-detail.catagory-list {
+  padding: 20px;
+  background: var(--alt-color);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.news-letter .subscribe-form{
+    background: var(--bg-color);
+}
+

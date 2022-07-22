@@ -168,7 +168,7 @@ setTimeout(function () {
     // gsap.utils.toArray("main").forEach(box => {
         // gsap.utils.toArray(".blog-post ,.popular-post .section-title-large").forEach(box => {
 //  gsap.utils.toArray(".blog-post ,.popular-post .section-title-large").forEach(box => {
-gsap.utils.toArray("main > *").forEach((box) => {
+gsap.utils.toArray("main").forEach((box) => {
     gsap.set(box, {
       y: 50,
     });
@@ -188,6 +188,7 @@ gsap.utils.toArray("main > *").forEach((box) => {
 //  =============================
 $(window).on("load resize orientationchange", function () {
   ResponsiveImg(".image-preview", 380, 215);
+  ResponsiveImg(".catagory-list .image-preview", 200, 175);
 });
 
 function ResponsiveImg(imgname, imgwidth, imgheight) {

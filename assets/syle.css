@@ -429,7 +429,7 @@ img,svg{
     max-width: 500px;
     margin: 0 auto;
   }
-  .m-search-form span.material-icons.material-icons-outlined {
+  .m-search-form .bx {
       position: absolute;
       left: 15px;
       top: 0;

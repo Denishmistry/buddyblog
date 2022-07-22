@@ -27,13 +27,16 @@
 
 @media only screen and (max-width:992px) {
   h6, .h6, h5, .h5 {
-      font-size: 0.84rem;
+      font-size: 0.9rem;
   }
   .h3, h3 {
       font-size: 1.2rem;
   }
-  p{
-    font-size: 0.9rem;
+  p,.excerpt,.read-more,.nav a{
+    font-size: 0.84rem;
+  }
+  .nav.internal-links a{
+    font-size: 0.8rem;
   }
 
   .cursor, .arrow-cursor{
@@ -60,8 +63,8 @@
     font-size: 1rem;
   }
 
-  .subscribe-form input {
-    font-size: 1rem;
+  .subscribe-form input,.subscribe-form .btn {
+    font-size: 0.84rem;
 
     padding: 12px 15px;
     max-width: 220px;
@@ -105,6 +108,12 @@
  .nav a {
     margin-right: 8px;
  }
+
+
+ .blog-post.with-detail.catagory-list {
+  padding: 10px;
+
+}
  .footer-copyright {
   padding-top: 15px;
   margin-top: 15px;
