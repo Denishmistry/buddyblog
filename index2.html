@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mary's simple recipe for maple bacon donuts
+           makes a sticky, sweet treat with just a hint
+           of salt that you'll keep coming back for.">
+  <!-- Bootstrap CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+  <!-- icon -->
+  <!-- <link rel="preload" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'"> -->
+
+
+  <!-- custom css -->
+  <link rel="preload" href="assets/extanal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="preload" href="assets/syle.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel='stylesheet'"
+    integrity=" sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel='stylesheet'"> -->
+
+    <!-- <link rel=" stylesheet" href="assets/syle.css">
+    <link rel="stylesheet" href="assets/responsive.css">
+    <link rel="stylesheet" href="assets/extanal.css"> -->
+  </noscript>
+  <!-- Tile -->
+  <title>Hello, world!</title>
+  <!-- <style>
+section{
+  /* position:relative; */
+  width:100%;
+  height:100vh;
+  padding: 0 !important;
+}
+#greenCircles{
+/* position:absolute; */
+  top:0;
+  right:0;
+  height:100%;
+}
+#circlePath{
+  visibility:hidden;
+}
+
+.text{
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  fill: #a0a0a0;
+  visibility:hidden;
+}
+  </style> -->
+</head>
+
+<body>
+  <!-- Pre loader -->
+  <div id="loading-mask">
+    <div class="preloader">
+      <div class="c-three-dots-loader"></div>
+    </div>
+  </div>
+  <!-- Header section start -->
+  <!-- custom cursor -->
+  <div class="cursor"></div>
+  <!-- custom cursor -->
+
+
+
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class='bx bx-search-alt-2'></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Authors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Tags</a>
+            </li>
+            <li>
+              <a class="nav-link active" aria-current="page" href="#">Categories</a>
+            </li>
+            <!-- Newsletter
+     
+            
+            
+            Let's Connect -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li> -->
+          </ul>
+          <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+          <button class="btn btn-transparent text-white me-2 search-btn">
+            <i class='bx bx-search-alt-2'></i>
+          </button>
+          <div class="d-flex">
+
+
+            <div class="darkmode">
+              <input class="form-check-input d-none" type="checkbox" role="switch" id="darkmode">
+              <label class="form-check-label theme-switch" for="darkmode">
+                <i class='bx bxs-moon'></i>
+              </label>
+
+            </div>
+          </div>
+        </div>
+
+    </nav>
+
+  </header>
+<style>
+.ex{
+  /* height: calc(200vh);
+  padding: 0 !important; */
+}
+#circleWrap{
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top:50%;
+  display: inline;
+}
+svg {
+  position:absolute;
+  /* height: 50vh; */
+  top:50%;
+  left:50%;
+  max-width: 100% !important;
+  overflow: visible;
+  max-width: inherit !important;
+  /* height: inherit !important; */
+}
+
+.item {
+  width: 500px;
+  height: 80px;
+  /* background-color: green; */
+  font-size: calc(30px + 10vh);
+  line-height: 83px;
+  font-family: sans-serif;
+  color: #484848;
+}
+
+#circle {
+  fill: #888887;
+}
+</style>
+
+<section></section>
+
+<section></section>
+
+<section></section>
+
+<section></section>
+
+<section></section>
+<section class="expirience ex">
+  <div id="circleWrap">
+
+
+    <svg  id ="svg"  width="1000" height="1000" viewBox="0 0 1000 1000">
+      <path  id="circle" data-name="Path 1" d="M500,0c276.142,0,500,223.858,500,500s-223.858,500-500,500S0,776.142,0,500,223.858,0,500,0Z" fill="#f7f7f7"/>
+    </svg>
+    
+  
+    <div class="item">ONE</div>
+    <div class="item">TWO</div>
+    <div class="item">THREE</div>
+    <div class="item">FOUR</div>
+    <div class="item">five</div>
+    <div class="item">Six</div>
+
+   
+  </div>
+</section>
+<section>asasdasdasdasds</section> -->
+<!-- 
+  <section>asdsada</section>
+
+  <section id="section02">
+  <svg id ="greenCircles" viewBox="0 0 300 200">
+  
+    <circle cx="300" cy="100" r="100" stroke="none" fill="green" />
+    <g id="small">
+      <circle  cx="400" cy="100" r="30" stroke="none" fill="#2f5d2f" />
+      <text class="text" text-anchor="middle"y="103" x="400">PAUSE</text>
+    </g>
+      <circle id="circlePath" cx="300" cy="100" r="100" stroke="red" fill="none" />
+  </svg>
+  </section>
+  
+  <section>asdasdss</section>
+  
+    
+
+  <!-- New resent post -->
+
+
+
+
+
+
+
+
+
+
+  <footer  >
+    <div class="news-letter pt-0 pb-md-4 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+              <div>
+                <h3 class="h2 mb-2">
+                  Subscribe to our Newsletter
+                </h3>
+                <p class="h6 fw-light">Get the email newsletter For latest Update.</p>
+              </div>
+        
+              <div class="subscribe-section my-3 my-md-0">
+                <div class="subscribe-wrap">
+                  <form data-members-form="subscribe" class="subscribe-form">
+                    <input data-members-email="" type="email" placeholder="Your email address"
+                      aria-label="Your email address" required="">
+                    <button class="btn btn-dark" type="submit">Subscribe</button><button class="global-button"
+                      type="submit" style="display:none" disabled="">Subscribe</button>
+                  </form>
+            
+                </div>
+              </div>
+            </div>
+    
+          </div >
+     
+        </div>
+      </div>
+   
+    </div>
+    <div class="container">
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <ul class="nav page-links">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recent Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Popular Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Find Post</a>
+            </li>
+          </ul>
+          <ul class="nav mt-2 internal-links">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Newsletter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Authors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tags</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Let's Connect</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="social-links justify-content-md-end mt-md-0 mt-3">
+            <li>
+              <a rel="noopener" target="_blank" href="!#">
+                <span class='bx bxl-facebook'></span>
+              </a>
+            </li>
+            <li>
+              <a rel="noopener" target="_blank" href="!#">
+                <span class='bx bxl-twitter'></span>
+              </a>
+            </li>
+            <li>
+              <a rel="noopener" target="_blank" href="!#">
+                <span class='bx bxl-github'></span>
+              </a>
+            </li>
+            <li>
+              <a rel="noopener" target="_blank" href="!#">
+                <span class='bx bxl-instagram'></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <div class="footer-copyright ">
+            <p class="mb-0">
+              Weiss Pro © 2022
+              &nbsp; • &nbsp;
+              Published with <a class="clink" href="#!" target="_blank" rel="noopener">Denish</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+
+
+  <!-- Gsap  -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js?v=3.3"></script>
+
+
+
+  <script src="assets/custom.js"></script>
+  <script src="assets/gsap.js"></script>
+
+</body>
+
+</html>
+
+<!-- https://greensock.com/forums/topic/17303-fade-in-and-slide-up/ -->

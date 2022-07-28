@@ -337,3 +337,136 @@
     background: var(--bg-color);
 }
 
+
+
+
+/* ========================
+        Profile page
+===========================  */
+.profile-page .container{
+  max-width: 1170px;
+}
+.profile-title {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 200px;
+  transition: var(--transition);
+}
+
+.profile-image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--alt-color);
+  position: absolute;
+  left: 25px;
+  right: 0;
+  top: -23px;
+  z-index: -1;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.profile-image:hover:before {
+  transform: translate(0px,25px);
+}
+
+.profile-image:hover img {
+  transform: translate(50px, 0px);
+}
+
+/* What i do */
+.whatido p {
+  font-weight: 100;
+  font-size: 0.88rem;
+  opacity: 0.8;
+}
+
+
+.expirince{
+  overflow: hidden;
+  position: relative;
+}
+/* #BrainImage{
+  height: 100vh;
+} */
+object#BrainImage {
+  position: absolute;
+  opacity: 1;
+  max-width: 40%;
+  height: calc(100% - 5px);
+  right: 0;
+  left: inherit;
+  width: 100%;
+  z-index: 11111;
+  animation: filteranim 5s linear 2s infinite alternate;
+}
+@keyframes filteranim{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+
+}
+.expirince-list{
+  padding-left: 0;
+  list-style: none;
+  
+}
+.expirince-list li {
+  max-width: 767px;
+  padding: 50px 0;
+  /* opacity: 0.5; */
+  transition: var(--transition);
+  /* border-bottom: 1px solid #f3f3f326; */
+}
+.expirince-list li.active{
+  /* opacity: 1;
+  transform: scale(1.1); */
+}
+.expirince-list li div{
+  transform: skewX(90deg);
+}
+.expirince-list li div{
+  transform: skewX(0deg);
+}
+.e-date {
+  font-size: .85rem;
+  opacity: 0.8;
+}
+.e-desc {
+  font-size: 0.94rem;
+}
+ul.expirince-list li:nth-child(2)  {
+  transform: translateX(0%);
+} 
+
+ /* ul.expirince-list li{
+  transform: translateX(200%);
+}
+ul.expirince-list li:nth-child(1) ,ul.expirince-list li:nth-child(3) {
+  transform: translateX(50%);
+}
+ul.expirince-list li {
+  transform: translateX(500%);
+} */
+
+
+

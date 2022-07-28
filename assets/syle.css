@@ -48,17 +48,16 @@
   --bg-color: #fff;
   --alt-color: #f2f0f2;
   --alt-color-dark:#151618;
-
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
   --transition:all ease 0.3s;
   --cursor:url('images/dot.svg'), auto !important;
-  --cursor-input:url('images/edit.svg'), auto !important;
+  --cursor-input:url('images/edit-white.svg'), auto !important;
   --bg-image:url(images/bg.png);
 }
 
 [data-theme="dark"] {
   --cursor:url('images/dot-white.svg'), auto !important;
-  --cursor-input:url('images/edit-white.svg'), auto !important;
+  --cursor-input:url('images/edit.svg'), auto !important;
   --bs-light-rgb: 33, 37, 41;
   --bs-dark-rgb: 40, 41, 62;
   --font-color: #e7e7e7;
@@ -67,6 +66,7 @@
   --alt-color: #28293e;
   --alt-color-dark:#f2f0f2;
   --bg-image:url(images/bg-dark.png);
+
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(229, 229, 229, 0.767) 100%);
 }
 body {
@@ -125,6 +125,10 @@ h1,
 header{
   position: relative;
   z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 
