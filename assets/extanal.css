@@ -432,21 +432,19 @@ object#BrainImage {
 }
 .expirince-list li {
   max-width: 767px;
-  padding: 50px 0;
-  /* opacity: 0.5; */
+  padding: 20px 0;
+  margin-bottom: 30px;
   transition: var(--transition);
-  /* border-bottom: 1px solid #f3f3f326; */
 }
 .expirince-list li.active{
-  /* opacity: 1;
-  transform: scale(1.1); */
+  opacity: 1;
+  transform: scale(1.05);
+  padding:20px;
+  background: var(--alt-color);
+
+  border-radius: 20px;
 }
-.expirince-list li div{
-  transform: skewX(90deg);
-}
-.expirince-list li div{
-  transform: skewX(0deg);
-}
+
 .e-date {
   font-size: .85rem;
   opacity: 0.8;
@@ -454,19 +452,7 @@ object#BrainImage {
 .e-desc {
   font-size: 0.94rem;
 }
-ul.expirince-list li:nth-child(2)  {
-  transform: translateX(0%);
-} 
 
- /* ul.expirince-list li{
-  transform: translateX(200%);
-}
-ul.expirince-list li:nth-child(1) ,ul.expirince-list li:nth-child(3) {
-  transform: translateX(50%);
-}
-ul.expirince-list li {
-  transform: translateX(500%);
-} */
 
 
 

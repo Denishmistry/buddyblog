@@ -103,21 +103,7 @@ $(window).on("load resize", function () {
     });
   }
 
-  if (window.innerWidth < 768) {
-    gsap.utils.toArray(".blogpost  .blogpost_preview").forEach((box) => {
-      gsap.to(box, {
-        scrollTrigger: {
-          trigger: box,
-          markers: false,
-          opacity: 1,
-          scrub: 2,
-          toggleClass: "active",
-          start: "0% 45%", // when the top of the trigger hits the top of the viewport
-          end: "100% 45%",
-        },
-      });
-    });
-  }
+
   // Smooth scroll
   // https://codepen.io/artyor/pen/bGEGVZg?editors=1010
   // https://greensock.com/docs/v3/Plugins/ScrollTrigger/static.scrollerProxy()
@@ -143,6 +129,24 @@ $(".search-close").on("click", function () {
   $(".l-search").removeClass("open");
 });
 
+//  ====================================
+//   Automatic open content on scroll
+//  ====================================
+
+if (window.innerWidth < 768) {
+  gsap.utils.toArray(".blogpost  .blogpost_preview").forEach((box) => {
+    gsap.to(box, {
+      scrollTrigger: {
+        trigger: box,
+        markers: false,
+        opacity: 1,
+        toggleClass: "active",
+        start: "0% 45%", // when the top of the trigger hits the top of the viewport
+        end: "100% 45%",
+      },
+    });
+  });
+}
 //  ====================================
 //     load delay (Smooth scrolling)
 //  ====================================
@@ -171,13 +175,16 @@ setTimeout(function () {
 gsap.utils.toArray("main").forEach((box) => {
     gsap.set(box, {
       y: 100,
+      ease: 'power1.out',
     });
     gsap.to(box, {
       scrollTrigger: {
         trigger: box,
         markers: false,
-        scrub: 3,
+        scrub: 2,
+    
       },
+      ease: 'power1.out',
       y: 0,
     });
   });
@@ -285,44 +292,41 @@ gsap.utils.toArray(".whatido").forEach((box) => {
 
 if(window.innerWidth > 1200){
 gsap.utils.toArray(".expirince-list li").forEach((box) => {
-  gsap.set(box, { 
-    x:500,
-  });
+
   gsap.to(box, {
     scrollTrigger: {
       trigger: box,
       markers: false,
       scrub: 2,
       toggleClass: "active",
-      start: "0% 100%",
+      start: "0% 60%",
       end: "100% 60%",
     },
-    x:0,
-    opacity:1,
+
   });
 });
 
 
-gsap.utils.toArray(".expirince-list li div").forEach((box) => {
-  gsap.set(box, { 
+// gsap.utils.toArray(".expirince-list li div").forEach((box) => {
+//   gsap.set(box, { 
 
-    skewType:"simple",
-    skewX:-90,
-    opacity:0,
+//     skewType:"simple",
+//     skewX:-90,
+//     opacity:0,
 
-  });
-  gsap.to(box, {
-    scrollTrigger: {
-      trigger: box,
-      markers: false,
-      scrub: 4,
-      start: "0% 70%", 
-      end: "10% 70%",
-    },
-    skewX:0,
-    opacity:1,
-  });
-});
+//   });
+//   gsap.to(box, {
+//     scrollTrigger: {
+//       trigger: box,
+//       markers: false,
+//       scrub: 4,
+//       start: "0% 70%", 
+//       end: "10% 70%",
+//     },
+//     skewX:0,
+//     opacity:1,
+//   });
+// });
 }
 
 // =============
@@ -340,7 +344,7 @@ function BrainImage(){
   
   const triggerselector = document.querySelector(".expirince");
   gsap.utils.toArray(topbrain).forEach((box) => {
-    gsap.set(box, { strokeDasharray: 330,strokeDashoffset: 330,opacity:0.1 });
+    gsap.set(box, { strokeDasharray: 330,strokeDashoffset: 330,opacity:0.3 });
     gsap.to(box, {
       scrollTrigger: {trigger: triggerselector, markers: false, scrub: 4, start: "0% 50%", end: "30% 30%", },
 
@@ -349,7 +353,7 @@ function BrainImage(){
   });
 
   gsap.utils.toArray(brainmaintop).forEach((box) => {
-    gsap.set(box, {strokeDasharray: 164, strokeDashoffset: 164,opacity:0.1});
+    gsap.set(box, {strokeDasharray: 164, strokeDashoffset: 164,opacity:0.3});
     gsap.to(box, {
       scrollTrigger: {trigger: triggerselector, markers: false, scrub: 4, start: "40% 50%", end: "100% 30%", },
       strokeDashoffset:0,
@@ -360,7 +364,7 @@ function BrainImage(){
     gsap.set(box, { 
       strokeDasharray: 880,
       strokeDashoffset: 880,  
-      opacity:0.1 
+      opacity:0.3 
     });
     gsap.to(box, {
       scrollTrigger: {trigger: triggerselector, markers: false, scrub: 4, start: "40% 80%", end: "90% 50%", },
@@ -369,7 +373,7 @@ function BrainImage(){
   });
 
   gsap.utils.toArray(bottombrain).forEach((box) => {
-    gsap.set(box, {strokeDasharray: 227, strokeDashoffset: 227,opacity:0.1 });
+    gsap.set(box, {strokeDasharray: 227, strokeDashoffset: 227,opacity:0.3 });
     gsap.to(box, {
       scrollTrigger: {trigger: triggerselector, markers: false, scrub: 4, start: "70% 80%", end: "90% 50%", },
 
@@ -381,8 +385,8 @@ function BrainImage(){
 const refs = [...document.querySelectorAll(`[data-svg]`)];
 for (let i = 0; i < refs.length; i++) {
     refs[i].addEventListener("load", window[refs[i].getAttribute("data-svg")]);
-    console.log(refs[i].getAttribute("data-svg"));
-    console.log(window[refs[i].getAttribute("data-svg")]);
+    // console.log(refs[i].getAttribute("data-svg"));
+    // console.log(window[refs[i].getAttribute("data-svg")]);
 }
 
 // var path = document.querySelector('#topline');
