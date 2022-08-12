@@ -41,8 +41,8 @@
       Root css
 ======================= */
 :root {
-  --cursor:url('images/dot.svg'), auto;
-  --cursor-input:url('images/edit.svg'), auto !important;
+  --cursor:url('../images/dot.svg'), auto;
+  --cursor-input:url('../images/edit.svg'), auto !important;
   --font-color: #151618;
   --alt-font-color:#f2f0f2;
   --bg-color: #fff;
@@ -50,14 +50,16 @@
   --alt-color-dark:#151618;
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
   --transition:all ease 0.3s;
-  --cursor:url('images/dot.svg'), auto !important;
-  --cursor-input:url('images/edit-white.svg'), auto !important;
-  --bg-image:url(images/bg.png);
+  --cursor:url('../images/dot.svg'), auto !important;
+  --cursor-input:url('../images/edit-white.svg'), auto !important;
+  --bg-image:url("../images/bg.png");
+  --skill-back:#dfdfdf;
+  --skill-front:#2d2d2d;
 }
 
 [data-theme="dark"] {
-  --cursor:url('images/dot-white.svg'), auto !important;
-  --cursor-input:url('images/edit.svg'), auto !important;
+  --cursor:url('../images/dot-white.svg'), auto !important;
+  --cursor-input:url('../images/edit.svg'), auto !important;
   --bs-light-rgb: 33, 37, 41;
   --bs-dark-rgb: 40, 41, 62;
   --font-color: #e7e7e7;
@@ -65,9 +67,13 @@
   --bg-color: #1c1c27;
   --alt-color: #28293e;
   --alt-color-dark:#f2f0f2;
-  --bg-image:url(images/bg-dark.png);
+  --bg-image:url("../images/bg-dark.png");
 
   --btn-hover-effect:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(229, 229, 229, 0.767) 100%);
+
+
+  --skill-back:#000000;
+  --skill-front:#b0b0b0;
 }
 body {
   

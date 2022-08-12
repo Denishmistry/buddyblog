@@ -181,7 +181,7 @@ gsap.utils.toArray("main").forEach((box) => {
       scrollTrigger: {
         trigger: box,
         markers: false,
-        scrub: 2,
+        scrub: 4,
     
       },
       ease: 'power1.out',
@@ -331,9 +331,8 @@ gsap.utils.toArray(".expirince-list li").forEach((box) => {
 
 // =============
 // brain Image
-
-// https://codepen.io/cassie-codes/pen/MWowWEK/ba15ec4c52300f13d3d109597471f021
 // =============
+
 function BrainImage(){
   const doc = this.getSVGDocument();
   const brain = doc.querySelector("#brain");

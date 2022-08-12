@@ -1,0 +1,186 @@
+h3 {
+  margin:5px 0; 
+}
+
+.sliderContainer {
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+
+}
+
+.slick-slide {
+  /* background: blue; */
+  color: white;
+  padding: 80px 0 120px;
+  font-size: 30px;
+  font-family: "Arial", "Helvetica";
+  text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+.image-wrapper{
+  display: flex !important;
+  justify-content: center;
+}
+
+
+.slick-slide:nth-child(odd) {
+  /* background: green; */
+}
+.slick-slide{
+  transition: all ease 0.5s;
+}
+.slick-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slick-prev {
+  left: 50px;
+  z-index: 9999999;
+}
+.slick-next {
+  right: 50px;
+  z-index: 9999999;
+}
+.progressBarContainer {
+    position: absolute;
+    bottom: 20px;
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.progressBarContainer div {
+  display: block;
+  width: 30%;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 5%;
+  float: left;
+  color: white;
+}
+/* .frame {
+  position: absolute;
+  z-index: 99999;
+  left: 0;
+  right: 0;
+  top: -90px;
+  text-align: center;
+  margin: 0 auto;
+  background: url(iphone1.png);
+  background-size: 100% 100%;
+ height: 100%;
+  background-repeat-y: no-repeat;
+   height: calc(100% + 180px);
+  
+} */
+.frame{
+  position: absolute;
+  z-index: 99999;
+  left: 0;
+  right: -4px;
+  top: -14%;
+  text-align: center;
+  margin: 0 auto;
+  /* background: url(iphone1.png); */
+  background-size: 100% 100%;
+  background-repeat-y: no-repeat;
+  /* width: calc((115%/7)); */
+  height: 128%;
+}
+.slick-slide{
+  padding: 0 !important;
+}
+ 
+
+.progressBarContainer div:last-child {
+  margin-right: 0;
+}
+
+.progressBarContainer div span.progressBar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+}
+
+.progressBarContainer div span.progressBar .inProgress {
+  background-color: rgba(255, 255, 255, 1);
+  width: 0%;
+  height: 4px;
+}
+
+
+.frame img{
+  width: 100%;
+  height: 100%;
+
+}
+/* Custom */
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    background: red;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    content: '';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li {
+  width: 100px;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .25;
+    color: black;
+}
+.slick-dots li.slick-active button:after {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    opacity:1;
+    background: blue;
+    left: 0;
+    width:80px;
+    height: 3px;
+    content: '';
+    text-align: center;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index:9999999999999;
+
+    animation-name: progress;
+     animation-timing-function: linear;
+    animation-duration: 2600ms;
+    animation-delay:0;
+}
+
+@keyframes progress {
+  from { width: 0px;}
+  to {width: 80px;}
+}
