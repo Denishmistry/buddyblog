@@ -50,7 +50,7 @@
           $(window).width() <= 1024
         ) {
           NumberOfItem = Settings.NoItemMd;
-        } else if (Settings.NoItemSm && $(window).width() <= 450) {
+        } else if (Settings.NoItemSm && $(window).width() <= 992) {
           NumberOfItem = Settings.NoItemSm;
         } else {
           var NumberOfItem = 1;
@@ -237,6 +237,7 @@
   $(document).ready(function () {
     $(".related-sldier").slider({
       NoItemLg: 2.2,
+      NoItemSm:1.1,
       SlidtoScroll: false,
       ItemtoSlide: 2
     });
