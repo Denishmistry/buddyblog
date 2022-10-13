@@ -1,0 +1,42 @@
+{
+  "name": "indianicseedproject",
+  "version": "1.0.0",
+  "description": "IndiaNic HTML5 Seed Project with Scss and Bootstrap4",
+  "main": "",
+  "scripts": {
+    "test": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git.indianic.com/html5seed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/html5seed/issues"
+  },
+  "homepage": "https://github.com/html5seed#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.7",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-strip-css-comments": "^2.0.0",
+    "jshint": "^2.9.7"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.1",
+    "boxicons": "^2.1.4",
+    "gulp": "4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-webp": "3.0.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^7.0.1",
+    "sass": "^1.54.8",
+    "select2": "^4.1.0-rc.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

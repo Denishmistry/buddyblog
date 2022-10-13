@@ -1,0 +1,238 @@
+// MEDIA BREAKPOINTS
+// @mixin media($breakpoint, $point) {
+//   @if $breakpoint == down {
+//     @media (max-width: #{$point - 0.2}) { @content; }
+//   }
+//   @else if $breakpoint == up {
+//     @media (min-width: $point) { @content; }
+//   }
+// }
+
+/*Large devices (desktops, grater than 1200px)*/
+@mixin Desktop {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin xlUptoDesktopSmall {
+  @media only screen and (min-width: 1200px) and (max-width: 1365.98px) {
+    @content;
+  }
+}
+@mixin xlUptoDesktopLarge {
+  @media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin xxlUp {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin xlUp {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+/*Large devices (desktops, less than 1200px)*/
+@mixin lg {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+@mixin mdtolg {
+  @media only screen and (max-width: 1199.98px) and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin lgtomd {
+  @media only screen and (max-width: 991.98px) and (min-width: 768px) {
+    @content;
+  }
+}
+/*tablets,desktops, grater than 992px*/
+@mixin mdUp {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+/* Medium devices (tablets, less than 992px) */
+@mixin md {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+/*tablets,desktops, grater than 768px*/
+@mixin smUp {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+/* Small devices (landscape phones, less than 768px)*/
+@mixin sm {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@mixin xs {
+  @media only screen and (max-width: 575.98px) {
+    @content;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 413px) */
+@mixin xxs {
+  @media only screen and (max-width: 413.98px) {
+    @content;
+  }
+}
+
+@mixin xxxs {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+// How to use media mixin demo
+//  body {
+//    background:$primary;
+//    @include media(down, $breakpoint-xl) {
+//      background: $secondary;
+//    }
+//  }
+//  body {
+//    background: $secondary;
+//    @include media(up, $breakpoint-xl) {
+//      background: $primary;
+//    }
+// }
+
+// CALC FUNCTION RULE
+@mixin calc($property, $expression) {
+  #{$property}: calc(#{$expression});
+}
+// How to use calc Function demo
+// div {
+//    @include calc( width, '100% - 2px');
+// }
+
+// PREFIX RULE
+@mixin css3-prefix($prop, $value) {
+    -webkit-#{$prop}: #{$value};
+    -moz-#{$prop}: #{$value};
+    -ms-#{$prop}: #{$value};
+    -o-#{$prop}: #{$value};
+    #{$prop}: #{$value};
+}
+// How to use Prefix
+// div {
+//    @include css3-prefix(transform, scale3d(2.5, 2, 1.5));
+// }
+
+// POSITION
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// TEXT ELLIPSIS
+@mixin text-ellipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+// Image Effect
+@mixin ImgFade {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    transition: all ease 0.6s;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+
+  }
+
+  &:hover:before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+  }
+}
+// dropshadow
+@mixin DropShadow{
+  box-shadow: 0px 40px 32px -8px rgba(15 ,15 ,15 , 0.12);
+}
+
+// BORDER RADIUS
+@mixin border-radius($border-radius) {
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+}
+// How to Use border-radius
+//@include border-radius(value) //10 or 50%}
+
+// Button sizes
+@mixin button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height-base, $font-semibold, $box-shadow) {
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $font-size-base;
+  line-height:$btn-line-height;
+  font-weight: $font-semibold;
+  box-shadow: $box-shadow;
+}
+
+// Placeholder RULE
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+// How to Use placeholder
+//@include placeholder {
+// color:$gray;
+//}
+
+// Gradients
+@mixin x-linear-gradient($direction, $fallback, $from, $to) {
+  $directions: helper-gradient-angle($direction);
+  // Provide a fallback-color
+  background-color: $fallback;
+  // Cross-browser linear-gradients
+  background-image: -webkit-gradient(linear,$directions, from($from), to($to)); // Android 2.1-3.0
+  background-image: -webkit-linear-gradient($directions, $from, $to);
+  background-image:linear-gradient($direction, $from, $to);
+}
+// condition: @if and @else square circle
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+  @if $circle {
+    border-radius: $size / 2;
+  }
+}
+// How to use avatar demo
+// .square-av {
+//   @include avatar(100px, $circle: false);
+//   background: $primary;
+// }
+// .circle-av {
+//   @include avatar(100px, $circle: true);
+//   background: $primary;
+// }
+
+//Theme Option
+

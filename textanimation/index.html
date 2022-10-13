@@ -1,93 +1,255 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>On scroll text animation using wow js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./style.css">
-
+  <!-- ref:https://moheim.com/ -->
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<!-- <h1>make firsl line span wrap in another span <== need to check</h1> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- <div class="str"> 
+  <!-- partial:index.partial.html -->
+  <!-- <h1>make firsl line span wrap in another span <== need to check</h1> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- <div class="str">
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 </div> -->
-<main class="main" >
-  <div class="result"></div>
-  <h1 class="welcome">MOHEIM creates “new standard” to enrich your everyday life.</h1>
-      <p class="paragraph">
-        One prototype was described as "the most beautiful dustbin in the world" because of its
-    minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
-    del Mobile in Milan, and four years later, 
-    minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
-    del Mobile in Milan, and four years later, 
-      </p>
-      <p class="paragraph">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-      </p>
+<div id="viewport">
+  <main class="main">
+    <div class="result"></div>
+    <h1 class="welcome">MOHEIM creates “new standard” to enrich your everyday life.</h1>
+    <p class="paragraph">
+      One prototype was described as "the most beautiful dustbin in the world" because of its
+      minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+      del Mobile in Milan, and four years later,
+      minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+      del Mobile in Milan, and four years later,
+    </p>
+    <p class="paragraph">
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+      its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+      opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+      packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+      uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+      accident, sometimes on purpose (injected humour and the like).
+    </p>
 
 
+
+    <section id="content">
+      <!--  smooth scrolling biz goes in here -->
+      <section class="image-grid container">
+        <!--    use picture elements -->
+        <picture class="image_cont">
+          <source
+            srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1500"
+            media="(min-width: 1500px)">
+          <source
+            srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1000"
+            media="(min-width: 700px)">
+          <img class=""
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=600">
+        </picture>
+        <!--    or just images -->
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1569596082827-c5e8990496cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1587932775991-708a20af2cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDQ5Mg&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1200"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1623166200209-6bd48520d6cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1532587459811-f057563d1936?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="spacer"></div> -->
+    </section>
+
+
+
+
+
+
+    <h1 class="welcome">MOHEIM creates “new standard” to enrich your everyday life.</h1>
+    <p class="paragraph">
+      One prototype was described as "the most beautiful dustbin in the world" because of its
+      minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+      del Mobile in Milan, and four years later,
+    </p>
 
       <section id="content">
-        <!--  smooth scrolling biz goes in here -->
-        <section class="image-grid container">
-         <!--    use picture elements -->
-         <picture class="image_cont">
-          <source srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1500" media="(min-width: 1500px)">
-          <source srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1000" media="(min-width: 700px)">
-          <img class="" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=600">
-         </picture>
-         <!--    or just images -->
-         <div class="image_cont">
-          <img src="https://images.unsplash.com/photo-1569596082827-c5e8990496cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500" alt="">
-         </div>
-         <div class="image_cont">
-          <img src="https://images.unsplash.com/photo-1587932775991-708a20af2cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDQ5Mg&ixlib=rb-1.2.1&q=80&w=500" alt="">
-         </div>
-         <div class="image_cont">
-          <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1200" alt="">
-         </div>
-         <div class="image_cont">
-          <img src="https://images.unsplash.com/photo-1623166200209-6bd48520d6cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500" alt="">
-         </div>
-         <div class="image_cont">
-          <img src="https://images.unsplash.com/photo-1532587459811-f057563d1936?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500" alt="">
-         </div>
-        </section>
-        <!-- <div class="spacer"></div> -->
-       </section>
-       
+      <!--  smooth scrolling biz goes in here -->
+      <section class="image-grid container">
+        <!--    use picture elements -->
+        <!-- <picture class="image_cont">
+          <source
+            srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1500"
+            media="(min-width: 1500px)">
+          <source
+            srcset="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1000"
+            media="(min-width: 700px)">
+          <img class=""
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=600">
+        </picture> -->
+        <!--    or just images -->
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1569596082827-c5e8990496cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1587932775991-708a20af2cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDQ5Mg&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1200"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1623166200209-6bd48520d6cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <div class="image_cont">
+          <img
+            src="https://images.unsplash.com/photo-1532587459811-f057563d1936?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500"
+            alt="">
+          <div class="detail-block">
+            <h4>LOREM IPSUM GENERATOR</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+      </section>
+      <h1 class="welcome">MOHEIM creates “new standard” to enrich your everyday life.</h1>
+      <p class="paragraph">
+        One prototype was described as "the most beautiful dustbin in the world" because of its
+        minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+        del Mobile in Milan, and four years later,
+        minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+        del Mobile in Milan, and four years later,
+      </p>
+      <p class="paragraph">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+        uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like).
+      </p>
 
-  
+      <h1 class="welcome">MOHEIM creates “new standard” to enrich your everyday life.</h1>
+      <p class="paragraph">
+        One prototype was described as "the most beautiful dustbin in the world" because of its
+        minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+        del Mobile in Milan, and four years later,
+        minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+        del Mobile in Milan, and four years later,
+      </p>
+      <p class="paragraph">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+        uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like).
+      </p>
 
-   
-  
-  <h1 class="welcome">MOHEIM creates “new standard”  to enrich your everyday life.</h1>
-  <p class="paragraph">
-    One prototype was described as "the most beautiful dustbin in the world" because of its
-minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
-del Mobile in Milan, and four years later, 
-  </p>
-</main>
-<footer>
-  <p>1960s with the release of Letraset sheets containing Lorem Ipsum passages,</p>
-</footer>
+      <h1 class="welcome">MOHEIM creates “new standard” to enrich your everyday life.</h1>
+      <p class="paragraph">
+        One prototype was described as "the most beautiful dustbin in the world" because of its
+        minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+        del Mobile in Milan, and four years later,
+        minimalist design and unprecedented structure. In 2010, the work was presented at the Salone
+        del Mobile in Milan, and four years later,
+      </p>
+      <p class="paragraph">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+        uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like).
+      </p>
 
-<!-- partial -->
+      <!-- <div class="spacer"></div> -->
+    </section>
+    <footer>
+      <p>1960s with the release of Letraset sheets containing Lorem Ipsum passages,</p>
+    </footer>
+  </main>
+
+</div>
+
+
+  <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'>
-</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'>
+  </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
-<script  src="./script.js"></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
 <!-- https://codepen.io/GreenSock/pen/LYZxqrG?editors=1100 -->
 <!-- https://greensock.com/docs/v3/Plugins/ScrollSmoother -->

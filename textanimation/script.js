@@ -1,7 +1,7 @@
 wow = new WOW({
   boxClass: "wow",
   animateClass: "animated",
-  offset:-200,
+  offset:0,
   mobile: true,
   live: true
 });
@@ -66,53 +66,80 @@ $(".welcome").splittingcharfn({
 // data-wow-offset: Distance to start the animation (related to the browser bottom)
 // data-wow-iteration: Number of times the animation is repeated
 
-var offset = 200;
-// document.getElementsByClassName("main").style.paddingTop = "50px";
-gsap.utils.toArray("main").forEach((box) => {
-  gsap.set(box, {
-    y: -offset,
-    ease: 'power1.out',
-  });
-  gsap.to(box, {
-    scrollTrigger: {
-      trigger: box,
-      markers: false,
-      scrub: 2,
-  
-    },
-    ease: 'power1.out',
-    y: 0,
-  });
-});
+// smooth scroll
+// var offset = 200;
+// document.getElementsByClassName("main")[0].style.paddingTop = + offset + "px";
+// gsap.utils.toArray("main").forEach((box) => {
+//   gsap.set(box, {
+//     y: -offset,
+//     ease: "none",
+//   });
+//   gsap.to(box, {
+//     ease: "none",
+//     y: 0,
+//     scrollTrigger: {
+//       trigger: box,
+//       markers: false,
+//       scrub: 1,
+//       invalidateOnRefresh: true
+
+//     },
+
+//   });
+// });
+
+// let container = document.querySelector("main");
+
+// let height;
+// function setHeight() {
+//   height = container.clientHeight;
+//   document.body.style.height = height + "px";
+// }
+// ScrollTrigger.addEventListener("refreshInit", setHeight);
+
+// // smooth scrolling container
+// gsap.to(container, {
+//   y: () => -(height - document.documentElement.clientHeight),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: document.body,
+//     start: "top top",
+//     end: "bottom bottom",
+//     scrub: 1,
+//     invalidateOnRefresh: true
+//   }
+// });
+
 
 gsap.utils.toArray(".image_cont img").forEach((box) => {
   gsap.set(box, {
-    y: -300,
+    y: -200,
 
   });
   gsap.to(box, {
+    ease: 'power1.out',
     scrollTrigger: {
-      trigger: box,
-      markers: false,
-      scrub: 2,
-      start:"30% 130%",
-      end:"130% 0%",
-  
+      trigger: ".image-grid",
+      markers: true,
+      scrub: 3,
+      start:"0% 100%",
+      end:"100% 0%",
+
     },
 
     y: 0,
   });
 });
-gsap.utils.toArray(".image_cont ").forEach((box) => {
+gsap.utils.toArray(".image_cont").forEach((box) => {
   gsap.set(box, {
-    y: 200,
+    y: 50,
     ease: 'power1.out',
   });
   gsap.to(box, {
     scrollTrigger: {
       trigger: box,
       markers: false,
-      scrub: 2,
+      scrub: 3,
       start:"0 100%",
       end:"100% 0%"
     },

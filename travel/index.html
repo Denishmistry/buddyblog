@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- SEO Metatag -->
+	<meta name="description" content="Free Web tutorials">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="John Doe">
+	<!-- Responsive Metatag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Feet</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<!-- Custom Css -->
+	<link rel="stylesheet" href="assets/css/style-min.css">
+</head>
+
+<body class="d-flex flex-column ">
+	<!-- Begin: Header -->
+	<header class="custom-header">
+
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/images/logo.svg" alt="Logo" width="100" height="30">
+				</a>
+
+
+				<div class="mobile">
+					<span class="nav-item mx-md-3 notification d-md-none d-block">
+						<a href="#" class="flex-center text-decoration-none">
+							<span class='bx bx-bell h5 mb-0'></span>
+							<span class="notification-dot"></span>
+						</a>
+					</span>
+					<span class="profile d-md-none d-block">
+						<a href="#" class="flex-center text-decoration-none">
+							<img src="assets/images/home/navprofile.png" alt="Profile">
+						</a>
+					</span>
+					<div class="menu-space d-md-none d-block">
+						<button class="toggle-menu ">
+							<span></span>
+						</button>
+					</div>
+
+
+					<span id="menu" class="menu-main d-md-none d-block">
+						<div class="menu-outer" id="navbarNavAltMarkup">
+							<ul class="navlist">
+								<li><a href="#!" title="Einblicke">Stay</a></li>
+								<li><a href="#!" title="Facts & Figures">Flight</a></li>
+								<li><a href="#!" title="Nutzung">Things to do</a></li>
+								<li><a href="#!" title="Nachhaltigkeit">Cars</a></li>
+								<li><a href="#!" title="Lage">Support </a></li>
+								<li><a href="#!" title="Kontakt">Language</a></li>
+								<li><a href="#!" title="Kontakt">List Your Property</a></li>
+							</ul>
+						</div>
+					</span>
+				</div>
+
+				<!-- desktop -->
+				<div class="collapse navbar-collapse desktop d-md-block d-none" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Travelers
+							</a>
+							<ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item active" href="index.html"><span
+											class='bx bx-message-square-dots'></span> Stays</a></li>
+								<li><a class="dropdown-item" href="#"><span class='bx bx-paper-plane'></span>Flights</a>
+								</li>
+								<li><a class="dropdown-item" href="#"><span class='bx bx-support'></span>Things to
+										do</a></li>
+								<li><a class="dropdown-item" href="#"><span class='bx bx-car'></span>Cars</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<div class="darkmode">
+								<input class="form-check-input d-none" type="checkbox" role="switch" id="darkmode">
+								<label class="form-check-label theme-switch" for="darkmode">
+									<i class='bx bxs-moon'></i>
+								</label>
+							</div>
+						</li>
+					</ul>
+					<ul class="navbar-nav border-0 pl-0 ms-0 ps-0 mb-2 mb-lg-0 align-items-center">
+
+						<li class="nav-item mx-md-3">
+							<a class="nav-link " aria-current="page" href="#">Support</a>
+						</li>
+						<li class="nav-item mx-md-3">
+							<a class="nav-link " aria-current="page" href="#">
+								<span class='bx bx-globe me-2 fs-16 mb-0'></span>Language
+							</a>
+
+						</li>
+						<li class="nav-item mx-md-3">
+							<a class="btn btn-outline-light btn-sm fs-14" aria-current="page" href="#">
+								List your property
+							</a>
+
+						</li>
+						<li class="nav-item mx-md-3 notification">
+							<a href="#" class="flex-center text-decoration-none">
+								<span class='bx bx-bell h5 mb-0'></span>
+								<span class="notification-dot"></span>
+							</a>
+						</li>
+						<li class="nav-item ms-md-3 profile">
+							<a href="#" class="flex-center text-decoration-none">
+								<img src="assets/images/home/navprofile.png" alt="Profile">
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- End: Header -->
+
+	<!-- Begin: Main Content -->
+	<main role="main" class="flex-shrink-0 sidebar">
+
+
+
+		<section class="home-section pb-150">
+			<div class="container-lg position-relative">
+				<!--  -->
+				<div class="hero-image">
+					<picture class="hero-img img-cover">
+						<source srcset="assets/images/home/home1.webp">
+						<img src="assets/images/home/home1.jpeg" alt="home">
+					</picture>
+					<!-- <img class="hero-img img-cover" src="assets/images/home/home1.jpeg" alt="Home"> -->
+					<h1 class="fs-96 lh-1 fw-bold">
+
+						<span class="fs-96 d-block lh-1 title-animation">Air, sleep,</span>
+						<span class="fs-96 d-block lh-1 title-animation">Dreams</span>
+					</h1>
+					<p class="font-24 title-animation" data-aos="scaledown">Find and book a great experience.</p>
+					<button class="btn btn-primary " data-aos="fade-in" data-aos-duration="6000"
+						data-aos-easing="linear" data-aos-delay="600">Start your search</button>
+				</div>
+				<!--  -->
+				<div class="tab-nav" data-aos="fade-inUp" data-aos-delay="600">
+					<nav class="nav  flex-row">
+						<a class="px-0 text-sm-center nav-link active" aria-current="page" href="#">Stays</a>
+						<a class="px-0 text-sm-center nav-link" href="#">Flights</a>
+						<a class="px-0 text-sm-center nav-link" href="#">Cars</a>
+						<a class="px-0 text-sm-center nav-link" href="#" tabindex="-1" aria-disabled="true">Things to
+							do</a>
+					</nav>
+					<div
+						class="mt-md-5 tab-nav-content d-flex flex-row flex-wrap justify-content-between">
+						<div class="location flex-content-row me-md-4 mb-3">
+							<div class="icon-block">
+
+								<span class='bx bx-location-plus fs-30 mb-0 text-gray'></span>
+							</div><!-- icon -->
+							<div class="tab-content ms-3">
+								<h3 class="fs-24 mb-2 fw-bold lh-1"> Location</h3>
+								<p class="text-gray mb-0">where are you going?</p>
+							</div>
+						</div>
+						<!--  -->
+						<div class="check-in flex-content-row  me-md-4 mb-3">
+							<div class="icon-block">
+
+								<span class='bx bx-calendar fs-30 mb-0 text-gray'></span>
+							</div><!-- icon -->
+							<div class="tab-content ms-3">
+								<h3 class="fs-24 mb-2 fw-bold lh-1"> Check in</h3>
+								<p class="text-gray mb-0">Add date</p>
+							</div>
+						</div>
+						<!--  -->
+						<div class="check-out flex-content-row me-md-4 mb-3">
+							<div class="icon-block">
+
+								<span class='bx bx-calendar fs-30 mb-0 text-gray'></span>
+							</div><!-- icon -->
+							<div class="tab-content ms-3">
+								<h3 class="fs-24 mb-2 fw-bold lh-1"> Check out</h3>
+								<p class="text-gray mb-0">Add date</p>
+							</div>
+						</div>
+						<!--  -->
+						<div class="travelers flex-content-row me-md-4 mb-3">
+							<div class="icon-block">
+
+								<span class='bx bx-user fs-30 mb-0 text-gray'></span>
+							</div><!-- icon -->
+							<div class="tab-content ms-3">
+								<h3 class="fs-24 mb-2 fw-bold lh-1"> Travelers</h3>
+								<p class="text-gray mb-0">Add guests</p>
+
+
+							</div>
+							<span class="bx bx-search travel-search">
+
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- adventure slider -->
+		<section class="adventure">
+			<div class="container">
+				<div class="title-block text-center mb-md-5 mb-4 pb-md-5">
+					<h2 class="fw-bold mb-0 title-animation lh-12">Let’s go on an adventure</h2>
+					<p class="fs-24 mb-0 text-gray title-animation">Find and book a great experience.</p>
+				</div>
+				<div class="adventure-slider  mb-5">
+					<div>
+						<div class="d-flex flex-row justify-content-center align-items-center">
+							<object class="slideranimation" data-svg="sliderAnimation"
+								data="assets/images/slidersvg/HolidaySummer.svg" type="image/svg+xml"></object>
+							<div class="slider-text ms-md-4 ms-2 me-md-5 me-2">
+								<p class="fs-16 lh-14 fw-semibold mb-2">Luxury resort at the sea</p>
+								<p class="places mb-0">9,326 places</p>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="d-flex flex-row justify-content-center align-items-center">
+							<object class="slideranimation" data-svg="sliderAnimation"
+								data="assets/images/slidersvg/HolidayCamp.svg" type="image/svg+xml"></object>
+							<div class="slider-text ms-md-4 ms-2 me-md-5 me-2">
+								<p class="fs-16 lh-14 fw-semibold mb-2">Camping amidst the wild</p>
+								<p class="places mb-0">12,326 places</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex flex-row justify-content-center align-items-center">
+							<object class="slideranimation" data-svg="sliderAnimation"
+								data="assets/images/slidersvg/HolidaySnow.svg" type="image/svg+xml"></object>
+							<div class="slider-text ms-md-4 ms-2 me-md-5 me-2">
+								<p class="fs-16 lh-14 fw-semibold mb-2">Luxury resort at the sea</p>
+								<p class="places mb-0">9,326 places</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="d-flex flex-row justify-content-center align-items-center">
+							<object class="slideranimation" data-svg="sliderAnimation"
+								data="assets/images/slidersvg/HolidayWinter.svg" type="image/svg+xml"></object>
+							<div class="slider-text ms-md-4 ms-2 me-md-5 me-2">
+								<p class="fs-16 lh-14 fw-semibold mb-2">Luxury resort at the sea</p>
+								<p class="places mb-0">9,326 places</p>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="d-flex flex-row justify-content-center align-items-center">
+							<object class="slideranimation" data-svg="sliderAnimation"
+								data="assets/images/slidersvg/Holidaypool.svg" type="image/svg+xml"></object>
+							<div class="slider-text ms-md-4 ms-2 me-md-5 me-2">
+								<p class="fs-16 lh-14 fw-semibold mb-2">Luxury resort at the sea</p>
+								<p class="places mb-0">9,326 places</p>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="d-flex flex-row justify-content-center align-items-center">
+							<object class="slideranimation" data-svg="sliderAnimation"
+								data="assets/images/slidersvg/HolidayIsland.svg" type="image/svg+xml"></object>
+							<div class="slider-text ms-md-4 ms-2 me-md-5 me-2">
+								<p class="fs-16 lh-14 fw-semibold mb-2">Luxury resort at the sea</p>
+								<p class="places mb-0">9,326 places</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Memeory/Review slider -->
+		<section class="review-slider">
+			<div class="container">
+				<div class="title-block text-center mb-md-5 mb-4 ">
+					<h2 class="fw-bold mb-2 title-animation lh-12">Travel to make memories all around the world</h2>
+					<p class="fs-24 mb-0 text-gray title-animation">Find trips that fit a flexible lifestyle</p>
+				</div>
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="memory-content ">
+							<p class="badge fs-14 bg-secondary ">01</p>
+							<h5 class="fw-semibold mb-2 mb-md-3 title-animation">Find trips that fit a flexible lifestyle</h5>
+							<p class="fs-14 lh-18 text-light-black-1 title-animation">Stacks is a production-ready
+								library of stackable
+								content blocks built in React Native</p>
+						</div>
+						<div class="memory-content ">
+							<p class="badge fs-14 bg-info">02</p>
+							<h5 class="fw-semibold mb-2 mb-md-3 title-animation">Travel with more confidence</h5>
+							<p class="fs-14 lh-18 text-light-black-1 title-animation">Stacks is a production-ready
+								library of stackable
+								content blocks built in React Native</p>
+						</div>
+						<div class="memory-content ">
+							<p class="badge fs-14 bg-success">03</p>
+							<h5 class="fw-semibold mb-2 mb-md-3 title-animation">See what’s really included</h5>
+							<p class="fs-14 lh-18 text-light-black-1 title-animation">Stacks is a production-ready
+								library of stackable
+								content blocks built in React Native
+							</p>
+						</div>
+						<a class="btn btn-primary mt-3 mt-md-4  m-lg-3 ms-3" href="">Start your search</a>
+					</div>
+					<div class="col-md-7">
+						<!-- <div class="memory-slider">
+									<div class="memory-slider-wrapper">
+										<picture class="hero-img img-cover" >
+											<source srcset="assets/images/home/memory-slider.webp">
+											<img src="assets/images/home/memory-slider.png" alt="Memory Slider">
+										</picture>
+
+									</div>
+								</div> -->
+						<div class="animation-image">
+							<picture class="img-cover img-fluid d-block">
+								<source srcset="assets/images/home/memeoryslide2.webp">
+								<img src="assets/images/home/memeoryslide2.png" alt="Memory Slider">
+							</picture>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</section>
+		<!-- HOw it's work section -->
+		<section class="howitworksec">
+			<div class="container">
+				<div class="title-block text-center mb-md-5 mb-4 pb-md-5">
+					<h2 class="fw-bold mb-0 title-animation lh-12 mb-2">How it work</h2>
+					<p class="fs-24 mb-0 text-gray title-animation">Keep calm & travel on</p>
+				</div>
+
+				<div class="row position-relative">
+					<img class="dash-line img-fluid" src="assets/images/home/dashline.svg" alt="How It's Work"
+						data-aos="fade-in" data-aos-delay="1000">
+					<div class="col-md-4">
+						<div class="howitwork  text-center">
+							<object class="howitworkimg" data-svg="HowItWork" data="assets/images/home/hiw1.svg"
+								type="image/svg+xml"></object>
+							<h5 class="fw-semibold" data-aos="fade-in" data-aos-delay="600">Book & relax</h5>
+							<p class="fs-14 text-gray mb-0 lh-18" data-aos="fade-in" data-aos-delay="600">We realize
+								ideas from simple to complex, everything becomes easy to use.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="howitwork  text-center">
+							<object class="howitworkimg" data-svg="HowItWork" data="assets/images/home/hiw2.svg"
+								type="image/svg+xml"></object>
+							<h5 class="fw-semibold" data-aos="fade-in" data-aos-delay="600">Smart checklist</h5>
+							<p class="fs-14 text-gray mb-0 lh-18" data-aos="fade-in" data-aos-delay="600">We realize
+								ideas from simple to complex, everything becomes easy to use.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="howitwork text-center">
+							<object class="howitworkimg" data-svg="HowItWork" data="assets/images/home/hiw3.svg"
+								type="image/svg+xml"></object>
+							<h5 class="fw-semibold" data-aos="fade-in" data-aos-delay="600">Save more</h5>
+							<p class="fs-14 text-gray mb-0 lh-18" data-aos="fade-in" data-aos-delay="600">We realize
+								ideas from simple to complex, everything becomes easy to use.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- live anywhere -->
+		<section class="liveanywhere">
+			<div class="container">
+				<div class="title-block text-center mb-md-5 mb-4 pb-md-5">
+					<h2 class="fw-bold mb-0 title-animation lh-12 mb-2">Live anywhere</h2>
+					<p class="fs-24 mb-0 text-gray title-animation">Keep calm & travel on</p>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6">
+						<a class="detail-link text-de" href="#!">
+							<div class="image_cont">
+								<picture>
+									<source srcset="assets/images/home/live1.webp">
+									<img width="365" height="500" src="assets/images/home/live1.png"
+										alt="Live anywhere">
+								</picture>
+
+
+							</div>
+							<div class="la-detail text-center mt-4">
+								<h6 class="fs-16 fw-medium ">Enjoy the great cold</h6>
+								<p class="text-gray fs-14">6,879 properties</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<a class="detail-link" href="#!">
+							<div class="image_cont">
+								<picture>
+									<source srcset="assets/images/home/live2.webp">
+									<img width="365" height="500" src="assets/images/home/live2.png"
+										alt="Live anywhere">
+								</picture>
+
+
+							</div>
+							<div class="la-detail text-center mt-4">
+								<h6 class="fs-16 fw-medium ">Pick up the earliest sunrise</h6>
+								<p class="text-gray fs-14">6,879 properties</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-6">
+
+						<div class="image_cont">
+							<picture>
+								<source srcset="assets/images/home/live3.webp">
+								<img width="365" height="500" src="assets/images/home/live3.png" alt="Live anywhere">
+							</picture>
+
+
+						</div>
+						<div class="la-detail text-center mt-4">
+							<h6 class="fs-16 fw-medium ">Enjoy the great cold</h6>
+							<p class="text-gray fs-14">6,879 properties</p>
+						</div>
+						</a>
+					</div>
+				</div>
+				<div class="text-center mt-md-5 mt-4">
+					<button class=" btn  btn-outline-light btn-sm" type="button">
+						<span class="bx bx-loader-circle bx-spin  me-2" role="status" aria-hidden="true"></span>
+						Load More
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- Travell filter gallery -->
+		<section class="travel">
+			<div class="container-xl container">
+				<div class="travel-main">
+					<div class="title-block text-left mb-md-5 mb-4 ms-0">
+						<h2 class="fw-bold mb-0 title-animation lh-12 mb-2">Go somewhere</h2>
+						<p class="fs-24 mb-0 text-gray title-animation">Let’s go on an adventure</p>
+					</div>
+					<div class="filters">
+						<ul class="filter-nav">
+							<li class="active" data-filter="*"><span class='bx bx-dollar-circle bx-tada me-1'></span>
+								All</li>
+							<li data-filter=".feature"><span class='bx bx-dollar-circle bx-tada me-1'></span>feature
+							</li>
+							<li data-filter=".familyfriends"><span
+									class='bx bx-dollar-circle bx-tada me-1'></span>Family-friendly</li>
+							<li data-filter=".onsale"><span class='bx bx-dollar-circle bx-tada me-1'></span>On sale</li>
+							<li data-filter=".subnav"><span class='bx bx-dollar-circle bx-tada me-1'></span>Sub nav</li>
+						</ul>
+					</div>
+
+					<div class="filters-content">
+						<div class="row grid">
+							<div class="col-sm-6 col-md-6 col-lg-3  all feature">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all subnav">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all onsale">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all subnav">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all familyfriends">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all familyfriends">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all subnav">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3  all onsale">
+								<a class="travels__card my-md-4 my-3" href="#!">
+									<div class="travels__preview">
+										<picture>
+											<source srcset="assets/images/home/img1.webp">
+											<img width="256" height="228" src="assets/images/home/img1.png"
+												alt="Go anywhere">
+										</picture>
+
+									</div>
+									<div class="travels__body">
+										<div class="travels__line">
+											<div class="travels__details">
+												<div class="travels__subtitle">The grand resort</div>
+												<div class="travels__location">Karineside</div>
+											</div>
+											<div class="travels__price">
+												<div class="travels__old">$356</div>
+												<div class="travels__actual">$267</div>
+											</div>
+										</div>
+										<div class="travels__line">
+											<div class="travels__date">Tue, Jul 20 - Fri, Jul 23</div>
+											<div class="travels__rating">
+												<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span>
+												4.9
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+						</div>
+						<div class="text-center mt-md-5 mt-4 ">
+							<button class=" btn  btn-outline-light  btn-sm" type="button">
+
+								View All
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- Planning -->
+		<section class="planning">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-5">
+						<div class="planing-content">
+							<p class="fs-12 fw-bold text-uppercase text-gray title-animation">SUPERCHARGE YOUR PLANNING
+								POWERS</p>
+							<h3 class="fw-bold h2 lh-12 mb-4 title-animation">Travel to make memories all around the
+								world</h3>
+							<p class="fs-16 lh-16 text-gray title-animation">Stacks is a production-ready library of
+								stackable content blocks built in React Native.
+							</p>
+
+							<form class="subscription slidown mt-md-5 mt-4 ">
+								<input class="subscription__input" type="tel" name="phone"
+									placeholder="Enter your phone number" required="required">
+								<button class="subscription__btn">
+									<span class="bx bx-right-arrow-alt"></span>
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<object class="planingsvg" data-svg="PlaningSvg" data="assets/images/home/planning.svg"
+							type="image/svg+xml"></object>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- BrowseBy-->
+		<section class="browseby">
+
+			<div class="container">
+				<div class="d-flex justify-content-between mx-md-2 align-items-center align-items-lg-start">
+					<div class="title-block text-left mb-md-5 mb-4 ms-0">
+						<h2 class="fw-bold mb-0 title-animation lh-12 mb-2">Browse by property type</h2>
+						<p class="fs-24 mb-0 text-gray title-animation">Let’s go on an adventure</p>
+					</div>
+					<div class="ml-3 d-flex custom-slick-arrow">
+						<span class="bprev custom-arrow"></span>
+						<span class="bnext custom-arrow"></span>
+					</div>
+				</div>
+
+
+				<div class="browsbyslider">
+					<a class="browse__card" href="#!">
+						<div class="browse__preview">
+							<div class="image_wrapper">
+								<picture>
+									<source srcset="assets/images/home/live3.webp">
+									<img width="365" height="500" src="assets/images/home/live3.png" alt="adventure">
+								</picture>
+							</div>
+							<div class="status-black browse__category">20% off</div>
+						</div>
+						<div class="fs-16 lh-14 fw-normal mb-1">Nature house</div>
+						<div class="browse__conten text-gray">
+							<span class="bx bx-home-alt me-1 fs-16"></span>
+							650,111
+						</div>
+					</a>
+					<!--  -->
+					<a class="browse__card" href="#!">
+						<div class="browse__preview">
+							<div class="image_wrapper">
+								<picture>
+									<source srcset="assets/images/home/live3.webp">
+									<img width="365" height="500" src="assets/images/home/live3.png" alt="adventure">
+								</picture>
+							</div>
+							<div class="status-black browse__category">20% off</div>
+						</div>
+						<div class="fs-16 lh-14 fw-normal mb-1">Nature house</div>
+						<div class="browse__content">
+							<span class="bx bx-home-alt me-1 fs-16"></span>650,111
+						</div>
+					</a>
+					<!--  -->
+					<a class="browse__card" href="#!">
+						<div class="browse__preview">
+							<div class="image_wrapper">
+								<picture>
+									<source srcset="assets/images/home/live3.webp">
+									<img width="365" height="500" src="assets/images/home/live3.png" alt="adventure">
+								</picture>
+							</div>
+							<div class="status-black browse__category">20% off</div>
+						</div>
+						<div class="fs-16 lh-14 fw-normal mb-1">Nature house</div>
+						<div class="browse__content">
+							<span class="bx bx-home-alt me-1 fs-16"></span>650,111
+						</div>
+					</a>
+					<!--  -->
+					<a class="browse__card" href="#!">
+						<div class="browse__preview">
+							<div class="image_wrapper">
+								<picture>
+									<source srcset="assets/images/home/live3.webp">
+									<img width="365" height="500" src="assets/images/home/live3.png" alt="adventure">
+								</picture>
+							</div>
+							<div class="status-black browse__category">20% off</div>
+						</div>
+						<div class="fs-16 lh-14 fw-normal mb-1">Nature house</div>
+						<div class="browse__content">
+							<span class="bx bx-home-alt me-1 fs-16"></span>650,111
+						</div>
+					</a>
+					<!--  -->
+					<a class="browse__card" href="#!">
+						<div class="browse__preview">
+							<div class="image_wrapper">
+								<picture>
+									<source srcset="assets/images/home/live3.webp">
+									<img width="365" height="500" src="assets/images/home/live3.png" alt="adventure">
+								</picture>
+							</div>
+							<div class="status-black browse__category">20% off</div>
+						</div>
+						<div class="fs-16 lh-14 fw-normal mb-1">Nature house</div>
+						<div class="browse__content">
+							<span class="bx bx-home-alt me-1 fs-16"></span>650,111
+						</div>
+					</a>
+					<!--  -->
+				</div>
+
+			</div>
+		</section>
+		<!-- Travell filter gallery -->
+		<!-- Explore nearby -->
+		<section class=" nearby">
+			<div class="container-xl container">
+				<div class="section-bg">
+					<div class="title-block text-center mb-md-5 mb-4 ">
+						<h2 class="fw-bold mb-0 title-animation lh-12 mb-2">Explore nearby</h2>
+						<p class="fs-24 mb-0 text-gray title-animation">10,789 beautiful places to go</p>
+					</div>
+					<div class="place-block">
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+						<a class="places__item" href="#!">
+							<div class="badge status-gray fs-12">1480</div>
+							<div class="places__preview"><img src="assets/images/home/nearby.png" alt="Place"></div>
+							<div class="fs-16 text-center fw-medium">Thompsonbury</div>
+							<div class="fs-12 text-center text-gray">15 minutes drive</div>
+						</a>
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+		<!-- Explore nearby -->
+
+		<!-- Best Host-->
+		<section class="besthost">
+
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center mx-md-2 mb-3 md-md-0">
+					<div class="title-block text-left mb-md-5 mb-0 ms-0">
+						<h2 class="fw-bold mb-0 title-animation lh-12 mb-md-2">Best hosts of the </h2>
+					</div>
+					<div class="ml-3 d-flex custom-slick-arrow">
+						<span class="prev custom-arrow"></span>
+						<span class="next custom-arrow"></span>
+					</div>
+				</div>
+
+
+				<div class="hosts">
+
+					<!--  -->
+					<a class="hosts__item" href="index.html">
+						<div class="hosts__preview">
+							<picture>
+								<source srcset="assets/images/home/hostcover.webp">
+								<img width="256" height="228" src="assets/images/home/hostcover.png" alt="Best hosts ">
+							</picture>
+							<div class="hosts__rating">
+								<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span> 5.0
+							</div>
+						</div>
+						<div class="hosts__body">
+							<div class="hosts__avatar">
+								<picture>
+									<source srcset="assets/images/home/host-avatar-1.webp">
+									<img width="80" height="80" src="assets/images/home/host-avatar-1.jpeg"
+										alt="Best hosts ">
+								</picture>
+							</div>
+							<div class="fs-16 fw-medium">Antone Heller</div>
+							<div class="fs-12 text-gray">Gaylordside</div>
+						</div>
+					</a>
+					<!--  -->
+					<!--  -->
+					<a class="hosts__item" href="index.html">
+						<div class="hosts__preview">
+							<picture>
+								<source srcset="assets/images/home/hostcover.webp">
+								<img width="256" height="228" src="assets/images/home/hostcover.png" alt="Best hosts ">
+							</picture>
+							<div class="hosts__rating">
+								<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span> 5.0
+							</div>
+						</div>
+						<div class="hosts__body">
+							<div class="hosts__avatar">
+								<picture>
+									<source srcset="assets/images/home/host-avatar-4.webp">
+									<img width="80" height="80" src="assets/images/home/host-avatar-4.jpeg"
+										alt="Best hosts ">
+								</picture>
+							</div>
+							<div class="fs-16 fw-medium">Antone Heller</div>
+							<div class="fs-12 text-gray">Gaylordside</div>
+						</div>
+					</a>
+					<!--  -->
+					<!--  -->
+					<a class="hosts__item" href="index.html">
+						<div class="hosts__preview">
+							<picture>
+								<source srcset="assets/images/home/hostcover.webp">
+								<img width="256" height="228" src="assets/images/home/hostcover.png" alt="Best hosts ">
+							</picture>
+							<div class="hosts__rating">
+								<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span> 5.0
+							</div>
+						</div>
+						<div class="hosts__body">
+							<div class="hosts__avatar">
+								<picture>
+									<source srcset="assets/images/home/host-avatar-4.webp">
+									<img width="80" height="80" src="assets/images/home/host-avatar-4.jpeg"
+										alt="Best hosts ">
+								</picture>
+							</div>
+							<div class="fs-16 fw-medium">Antone Heller</div>
+							<div class="fs-12 text-gray">Gaylordside</div>
+						</div>
+					</a>
+					<!--  -->
+					<!--  -->
+					<a class="hosts__item" href="index.html">
+						<div class="hosts__preview">
+							<picture>
+								<source srcset="assets/images/home/hostcover.webp">
+								<img width="256" height="228" src="assets/images/home/hostcover.png" alt="Best hosts ">
+							</picture>
+							<div class="hosts__rating">
+								<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span> 5.0
+							</div>
+						</div>
+						<div class="hosts__body">
+							<div class="hosts__avatar">
+								<picture>
+									<source srcset="assets/images/home/host-avatar-3.webp">
+									<img width="80" height="80" src="assets/images/home/host-avatar-3.jpeg"
+										alt="Best hosts ">
+								</picture>
+							</div>
+							<div class="fs-16 fw-medium">Antone Heller</div>
+							<div class="fs-12 text-gray">Gaylordside</div>
+						</div>
+					</a>
+					<!--  -->
+					<!--  -->
+					<a class="hosts__item" href="index.html">
+						<div class="hosts__preview">
+							<picture>
+								<source srcset="assets/images/home/hostcover.webp">
+								<img width="256" height="228" src="assets/images/home/hostcover.png" alt="Best hosts ">
+							</picture>
+							<div class="hosts__rating">
+								<span class="bx bxs-star me-1 fs-14" style="color:#FFD166;"></span> 5.0
+							</div>
+						</div>
+						<div class="hosts__body">
+							<div class="hosts__avatar">
+								<picture>
+									<source srcset="assets/images/home/host-avatar-2.webp">
+									<img width="80" height="80" src="assets/images/home/host-avatar-2.jpeg"
+										alt="Best hosts ">
+								</picture>
+							</div>
+							<div class="fs-16 fw-medium">Antone Heller</div>
+							<div class="fs-12 text-gray">Gaylordside</div>
+						</div>
+					</a>
+					<!--  -->
+				</div>
+			</div>
+		</section>
+		<!--Best Host -->
+		<!-- Video Section -->
+		<section class="video">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-end mx-md-2 mb-md-5 mb-4 ">
+					<div class="title-block video-title text-left ms-0 ">
+						<span class="fs-12">fleet travel ui kit</span>
+						<h2 class="fw-bold mb-0  lh-12 mb-2">
+							<span class="d-block title-animation">Book a ticket</span>
+							<span class="d-block title-animation">and just leave</span>
+						</h2>
+					</div>
+					<div class="ml-3 d-flex ">
+						<button class="btn btn-primary">Book Now</button>
+					</div>
+				</div>
+			</div>
+			<div class="container container-xl">
+				<div class="video-wrapper">
+					<video loop muted playsinline src="assets/images/demo.mp4" class="img-fluid" id="myVideo"></video>
+					<span class="ply-btn" id="play">
+						<span class="bx bx-play"></span>
+						<span class='bx bx-pause'></span>
+					</span>
+
+					<!-- <video autoplay loop muted playsinline src="assets/images/demo.mp4" class="img-fluid"></video> -->
+				</div>
+
+
+			</div>
+		</section>
+		<!--Video Section  -->
+		<!-- browse by catagory -->
+		<section class="catagory slick-arrow-bottom mb-3">
+			<div class="container">
+				<div class="title-block text-center mb-md-5 mb-4 pb-md-5">
+					<h2 class="fw-bold mb-0 title-animation lh-12 mb-2">Browse by category</h2>
+					<p class="fs-24 mb-0 text-gray title-animation">Let’s go on an adventure</p>
+				</div>
+				<div class="catagory-slider ">
+					<a class="categories__item mb-md-5 mb-2 mx-2" href="#!">
+						<div class="status categories__counter">333.356</div>
+						<div class="categories__icon mb-3">
+							<span class='bx bx-buildings fs-30 text-gray'></span>
+
+						</div>
+						<div class="fs-16 mb-1 fw-medium text-balck">City house</div>
+						<div class="fs-12 text-gray">Small description</div>
+					</a>
+					<!--  -->
+					<a class="categories__item mb-md-5 mb-2 mx-2" href="#!">
+						<div class="status categories__counter">333.356</div>
+						<div class="categories__icon mb-3">
+							<span class='bx bx-buildings fs-30 text-gray'></span>
+
+						</div>
+						<div class="fs-16 mb-1 fw-medium text-balck">City house</div>
+						<div class="fs-12 text-gray">Small description</div>
+					</a>
+					<!--  -->
+					<a class="categories__item mb-md-5 mb-2 mx-2" href="#!">
+						<div class="status categories__counter">333.356</div>
+						<div class="categories__icon mb-3">
+							<span class='bx bx-buildings fs-30 text-gray'></span>
+
+						</div>
+						<div class="fs-16 mb-1 fw-medium text-balck">City house</div>
+						<div class="fs-12 text-gray">Small description</div>
+					</a>
+					<!--  -->
+					<a class="categories__item mb-md-5 mb-2 mx-2" href="#!">
+						<div class="status categories__counter">333.356</div>
+						<div class="categories__icon mb-3">
+							<span class='bx bx-buildings fs-30 text-gray'></span>
+
+						</div>
+						<div class="fs-16 mb-1 fw-medium text-balck">City house</div>
+						<div class="fs-12 text-gray">Small description</div>
+					</a>
+					<!--  -->
+					<a class="categories__item mb-md-5 mb-2 mx-2" href="#!">
+						<div class="status categories__counter">333.356</div>
+						<div class="categories__icon mb-3">
+							<span class='bx bx-buildings fs-30 text-gray'></span>
+
+						</div>
+						<div class="fs-16 mb-1 fw-medium text-balck">City house</div>
+						<div class="fs-12 text-gray">Small description</div>
+					</a>
+					<!--  -->
+					<a class="categories__item mb-md-5 mb-2 mx-2" href="#!">
+						<div class="status categories__counter">333.356</div>
+						<div class="categories__icon mb-3">
+							<span class='bx bx-buildings fs-30 text-gray'></span>
+
+						</div>
+						<div class="fs-16 mb-1 fw-medium text-balck">City house</div>
+						<div class="fs-12 text-gray">Small description</div>
+					</a>
+					<!--  -->
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- End: Main Content -->
+
+	<!-- Begin: Footer-->
+	<footer class="footer  mt-lg-auto">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<a class="footer__logo" href="index.html">
+						<img class="some-icon" src="assets/images/logo.svg" alt="travel" width="94" height="32">
+					</a>
+				</div>
+				<div class="col-md-6">
+					<div class="footer__menu">
+						<a class="footer__link" href="index.html">Stays</a>
+						<a class="footer__link" href="flights.html">Flights</a>
+						<a class="footer__link" href="support.html">Support</a>
+						<a class="footer__link" href="cars.html">Cars</a>
+						<a class="footer__link" href="things-to-do.html">Things to do</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+
+					<div class="subscription  mb-3 text-uppercase fs-12 fw-bold lh-1">Join our community 🔥</div>
+						<form class="subscription " >
+
+							<input class="subscription__input " type="tel" name="phone" placeholder="Enter your phone number" required="required">
+							<button class="subscription__btn">
+								<span class="bx bx-right-arrow-alt"></span>
+							</button>
+						</form>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End: Footer-->
+
+	<!-- Bundle Scripts -->
+	<!-- <script src="assets/js/minify/javascript-lib-min.js"></script> -->
+	<script src="assets/js/minify/javascript-lib.js"></script>
+</body>
+
+</html>

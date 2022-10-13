@@ -41,7 +41,7 @@ body{
 
 @keyframes scalx {
   0% {
-   
+
     transform-origin: top;
     transform: translate3d(-20px, 80%, 180px) scale3d(1.1,1.1,1.1) ;
   }
@@ -95,20 +95,43 @@ body {
   height: 100vh;
 }
 
-.image-grid {
+/* .image-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 33.3vh;
   width: 100vw;
   margin: 0 auto;
-}
+} */
 .image-grid .image_cont {
   position: relative;
   overflow: hidden;
   height: 80vh;
   max-height: 500px;
+  background: #000;
 }
+.image-grid {
+  display: flex;
+}
+.image-grid .image_cont{
+  width: 30%;
+  flex-shrink: 0;
+}
+
+.image_cont img{
+  opacity: 0.5;
+}
+.detail-block{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: #01010196;
+  color: #fff;
+}
+
 .image-grid img {
   /* position: absolute; */
   width: 100%;
@@ -118,7 +141,26 @@ body {
   object-position: top;
 
 }
-.image-grid .image_cont:nth-child(1) {
+
+
+/* #viewport {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+main {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+} */
+
+/* .image-grid .image_cont:nth-child(1) {
   grid-column: 1/-1;
   grid-row: 1;
   height: 95vh;
@@ -150,7 +192,7 @@ body {
   grid-column: 2/span 8;
   grid-row: 6;
   height: 80vh;
-}
+} */
 @media screen and (min-width: 1000px) {
   .image-grid .image_cont {
     max-height: unset;
@@ -168,9 +210,7 @@ body {
     grid-column: 2/span 4;
   }
 }
-main{
-  padding-top: 200px;
-}
+
 .overlay {
   position: fixed;
   height: 100vh;
@@ -187,3 +227,4 @@ main{
   border-left: 0.5px white solid;
   border-right: 0.5px white solid;
 }
+

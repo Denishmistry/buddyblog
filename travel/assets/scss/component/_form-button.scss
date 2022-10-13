@@ -1,0 +1,241 @@
+
+// =====================
+//     Custom Button
+// =====================
+button,a{
+    &.btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        padding: 0 24px;
+        border-radius: 24px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        transition: all .2s;
+        @include md{
+            font-size: 14px;
+            height: 40px;
+            padding: 0 20px;
+        }
+        &.btn-sm{
+          height: 40px;
+          border-radius: 20px;
+          padding: 0 16px !important;
+          font-size: 14px !important;
+        }
+        &.btn-outline-light{
+            background: none;
+            border: 2px solid $white-gray;
+            color: $black;
+            &:hover{
+                color:$white ;
+                text-decoration: none;
+                border-color:$black;
+                background-color: $black;
+            }
+          }
+      }
+}
+
+
+
+
+// Begin: Button
+.btn {
+    @include button-size($btn-padding-y,$btn-padding-x,$btn-font-size,$line-height-base,$font-semibold,$box-shadow-0);
+    // @include border-radius(4px);
+    &.btn-sm{
+        @include button-size($btn-padding-y-sm,$btn-padding-x-sm,$btn-font-size-sm,$line-height-base,$font-semibold,$box-shadow-0);
+    }
+    &.btn-lg{
+        @include button-size($btn-padding-y-lg,$btn-padding-x-lg,$btn-font-size-lg,$line-height-base,$font-semibold,$box-shadow-0);
+    }
+    &:focus {
+        text-decoration: none;
+	}
+	&:hover {
+        text-decoration: none;
+	}
+}
+.btn-outline-light {
+    color: rgba($black, 0.6);
+    border-color: rgba($black, 0.6);
+    &:hover, &:focus, &:not(:disabled):not(.disabled):active {
+        background-color: $black;
+        color: $white;
+    }
+}
+// Form Control
+.form-control{
+    height: 48px;
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    border-color: $border-color;
+    color: $black;
+    @include border-radius($border-radius);
+    @include placeholder {
+        color:$gray;
+    }
+    &.form-control-lg{
+        height: 60px;
+    }
+    &.form-control-sm{
+        height: 36px;
+    }
+    &.square-input{
+        border-radius: 0;
+    }
+    &.line-input{
+        padding: size(20) 0;
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        background: transparent;
+    }
+    &.focus, &:focus {
+        color: $black;
+        box-shadow: none;
+        border-color: $primary;
+        @include placeholder {
+            color:$primary;
+        }
+    }
+    &[readonly]{
+        color: $gray;
+    }
+}
+textarea{
+    resize: none;
+}
+.has-danger{
+    color: $danger;
+    .form-control{
+        border-color:$danger;
+    }
+}
+/*==Custom Radio & Checkbox ==*/
+.custom-checkbox{
+    &.vertical{
+        label{
+            display: block;
+        }
+    }
+    label{
+        margin:0 10px 10px 0;
+        padding: 0 0 0 26px;
+        cursor: pointer;
+        position: relative;
+        display:inline-block
+    }
+    input[type="checkbox"]{
+        display: none;
+        + span {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            background: $white;
+            border: 1px solid $border-color;
+            border-radius: $border-radius;
+        }
+        &:checked{
+            + span {
+                border: 1px solid $primary;
+                background: $primary;
+                @include css3-prefix(transition, all 0.3s);
+            }
+            ~ span:after{
+                top: 50%;
+                left: 50%;
+                margin-left: -2px;
+                margin-top: -7px;
+                width: 5px;
+                height: 10px;
+                border-width: 0 1px 1px 0 !important;
+                display: block;
+                border: solid $white;
+                @include css3-prefix(transform, rotate(45deg));
+            }
+        }
+        ~ span:after{
+            display: none;
+            position: absolute;
+            content: "";
+        }
+        &:disabled{
+            + span {
+                opacity: 0.7;
+            }
+        }
+    }
+
+}
+.custom-radio{
+    &.vertical{
+        label{
+            display: block;
+        }
+    }
+    label{
+        margin:0 10px 10px 0;
+        padding: 0 0 0 26px;
+        cursor: pointer;
+        position: relative;
+        display:inline-block
+    }
+    input[type="radio"]{
+        display: none;
+        + span{
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            background: $white;
+            border: 1px solid $border-color;
+            border-radius: 50%;
+        }
+        ~ span:after {
+            display: none;
+            position: absolute;
+            content: "";
+        }
+        &:disabled{
+            + span {
+                opacity: 0.7;
+            }
+        }
+        &:checked{
+            + span {
+                background: $primary;
+                border: 1px solid $primary;
+                @include css3-prefix(transition, all 0.3s);
+            }
+            ~ span:after{
+                top: 50%;
+                left: 50%;
+                margin-left: -5px;
+                margin-top: -5px;
+                width: 10px;
+                height: 10px;
+                display: block;
+                background: $white;
+                @include border-radius(50%);
+            }
+        }
+    }
+}
+.ie8 .custom-checkbox input[type="checkbox"],
+.ie8 .custom-radio input[type="radio"] {
+  display: inline-block;
+}
+.ie8 .custom-checkbox span,
+.ie8 .custom-radio span {
+  display: none;
+}

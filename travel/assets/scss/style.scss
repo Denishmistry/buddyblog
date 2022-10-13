@@ -1,0 +1,277 @@
+// Darkmode bs
+
+
+// Bootstrap overdies varibles File
+@import "helpers/variable";
+// Default Bootstrap scss File no need to change
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "helpers/custom-bootsrap";
+// Custom Files
+@import "helpers/_import.scss";
+@import "component/_all.scss";
+
+
+// Darkmode icon
+.darkmode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    label{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+// Layout
+body,
+html {
+    height: 100%;
+}
+// font-family: 'DM Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+  object,img,svg,iframe {
+    max-width: 100%;
+    height: auto;
+  }
+body {
+    overflow-x: hidden;
+    font-family: $font-family-base;
+    font-weight: $font-regular;
+    font-size: 14px;
+    line-height: 1.71429;
+    -webkit-font-smoothing: antialiased;
+    // color: $body-color;
+    // background-color: $body-bg;
+
+}
+
+
+// =====================
+//     Custom classes
+// =====================
+
+
+// Begin: Links
+a {
+    // text-decoration: $link-decoration;
+    color: $link-color;
+    cursor: pointer;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        // text-decoration: $link-hover-decoration;
+        text-decoration: none;
+        outline: 0;
+        color: $link-hover-color;
+    }
+}
+
+.text-link {
+    color: $primary;
+    position: relative;
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 1rem;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        @include css3-prefix(transition, width 0.3s ease);
+    }
+
+    &:hover {
+        color: $primary;
+
+        &:after {
+            width: 100%;
+            border-bottom: 1px solid $primary;
+            opacity: 0.8;
+        }
+    }
+}
+
+// Begin: helper Classe
+p {
+    margin-top: 0;
+    margin-bottom: $paragraph-margin-bottom;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+// Custom Scroll with CSS only Supported Browser Chrome, Safari and Firefox
+* {
+    scrollbar-color: rgba($black, 0.3) transparent;
+    scrollbar-width: blue;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: rgb(212, 212, 212);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(212, 212, 212);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(75, 75, 75);
+    border-radius: 20px;
+}
+
+// Avatar square circle UI scss condition
+.square-av {
+    @include avatar(50px, $circle: false);
+    background: $primary;
+}
+
+.circle-av {
+    @include avatar(50px, $circle: true);
+    background: $primary;
+
+    .row.mt-4 & {
+        // Parent to child target
+        background: $danger;
+    }
+}
+
+// ===========
+// section
+// ===========
+section{
+    padding: 60px 0;
+    @include md{
+        padding: 30px 0;
+    }
+}
+// ================
+// Margin/Padding
+// ================
+.pb-150{
+    padding-bottom: 150px;
+}
+.title-block {
+    max-width: 767px;
+    margin: 0 auto;
+}
+//===============
+// select2
+//================
+$select-bg:#fff;
+$select-height:48px;
+$select-input-height:36px;
+$select-border:1px solid #d6d6d6;
+$select-selected-color:#efefef;
+$select-multi:#ebebeb;
+.select2-container{
+    min-width: 300px;
+    .select2-selection {
+        min-height: $select-height;
+        background-color: $select-bg;
+        border:$select-border ;
+        border-radius: 8px;
+        .select2-selection__rendered{
+            line-height: $select-height;
+        }
+        .select2-selection__arrow{
+            height: $select-height;
+        }
+    }
+    .select2-search--inline {
+        .select2-search__field{
+            height: $select-input-height;
+            line-height: $select-input-height;
+        }
+    }
+    .select2-dropdown{
+        background-color: $select-bg;
+        border: $select-border;
+        border-radius: 0 0 12px 12px;
+        overflow: hidden;
+        &.select2-dropdown--above{
+            border-radius:12px 12px  0 0 ;
+        }
+
+        .select2-results__option--selected{
+            background-color: $select-selected-color;
+        }
+        .select2-results__option--highlighted{
+            @extend .select2-results__option--selected;
+            color: #000;
+        }
+        .select2-results__option{
+            // height: $select-height;
+            line-height: $select-height;
+            padding: 0 10px;
+            box-sizing: content-box;
+        }
+        .select2-search__field{
+            padding: 10px 10px;
+
+            border: $select-border;
+            border-radius: 8px;
+            height: $select-input-height;
+            line-height: $select-input-height;
+        }
+    }
+  .select2-selection--multiple{
+    padding-bottom: 0;
+    .select2-selection__clear {
+
+        height:100%;
+        margin-top: 0;
+
+    }
+    .select2-selection__rendered {
+        line-height: 32px;
+    }
+    .select2-selection__choice {
+        background-color: $select-multi;
+        border: $select-border;
+        border-radius: 36px;
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+    .select2-selection__choice__remove {
+        border-right: 0;
+        padding: 0 8px;
+    }
+  }
+}
+// =============
+//    header
+// =============
+.navbar-nav {
+    padding-left: 30px;
+    margin-left: 30px;
+    border-left: 1px solid $border-color;
+}
+
+
+// =============
+// custom-badge
+// =============
+.badge{
+    display: inline-block;
+    min-width: 38px;
+    margin-bottom: 24px;
+    padding: 0 8px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 24px;
+    color: $white-gray;
+
+}

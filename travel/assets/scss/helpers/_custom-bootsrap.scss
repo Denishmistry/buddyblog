@@ -1,0 +1,64 @@
+
+// @import "../../../node_modules/bootstrap/scss/_functions.scss";
+// @import "../../../node_modules/bootstrap/scss/_variables.scss";
+// @import "../../../node_modules/bootstrap/scss/_mixins.scss";
+// @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+[data-theme="dark"] {
+
+
+
+  /* redefine theme colors for dark theme */
+  $primary: #ff002b;
+  $secondary: #b2df0e;
+  $success: #1bd1db;
+  $dark: #000;
+  $light:#fff;
+
+  $theme-colors: (
+      "primary": $primary,
+      "secondary": $secondary,
+      "success": $success,
+      "danger": $danger,
+      "info": $info,
+      "dark":$light ,
+      "light":$dark
+  );
+
+  $white:    #23262F	;
+  $black:	   #ffffff ;
+
+  /* redefine theme color variables */
+  @each $color, $value in $theme-colors {
+      --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  /* redefine theme color rgb vars (used for bg- colors) */
+  $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+  @each $color, $value in $theme-colors-rgb {
+      --#{$variable-prefix}#{$color}-rgb: #{$value};
+  }
+
+// Button-color
+  @each $color, $value in $theme-colors {
+    .btn-#{$color} {
+      @include button-variant($value, $value);
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @include button-outline-variant($value);
+    }
+  }
+
+
+// body color
+  $body-color:$black ;
+  $body-bg:  $white ;
+
+  --#{$variable-prefix}body-color: #{$body-color};
+  --#{$variable-prefix}body-bg: #{$body-bg};
+}
+
+

@@ -1,0 +1,578 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IndiaNic Admin: HTML5, Scss and Bootstrap 4</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style-min.css">
+</head>
+
+<body class="d-flex flex-column">
+    <!-- Header Start -->
+    <header>
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guidelines.html">Guidelines</a>
+                </li>
+                <li> <div class="col-auto">
+					<button class="btn btn-primary" id="btnSwitch">Switch</button>
+				</div></li>
+                <li>
+                    <div class="darkmode">
+                        <input class="form-check-input d-none" type="checkbox" role="switch" id="darkmode">
+                        <label class="form-check-label theme-switch" for="darkmode">
+                            <i class='bx bxs-moon'></i>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Begin: Main Content -->
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Email</label>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" name="email" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Password</label>
+                                    <div class="col-md-6">
+                                        <input id="password-field" type="password" class="form-control" name="password"
+                                            value="secret">
+                                        <span toggle="#password-field"
+                                            class="bx bx-hide field-icon toggle-password"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="white-box">
+                            <h2 class="mb-4">Select 2 </h2>
+                            <select class="js-example-basic-single" name="state">
+                                <option value="AL">Alabama</option>
+
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="white-box">
+                            <h2 class="mb-4">Select multiple select.</h2>
+                            <select name="state" class="js-example-basic-single" multiple="multiple">
+                                <optgroup label="Alaskan/Hawaiian Time Zone">
+                                    <option value="AK">Alaska</option>
+                                    <option value="HI" disabled="disabled">Hawaii</option>
+                                </optgroup>
+                                <optgroup label="Pacific Time Zone">
+                                    <option value="CA">California</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="WA">Washington</option>
+                                </optgroup>
+                                <optgroup label="Mountain Time Zone">
+                                    <option value="AZ">Arizona</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="WY">Wyoming</option>
+                                </optgroup>
+                                <optgroup label="Central Time Zone">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="WI">Wisconsin</option>
+                                </optgroup>
+                                <optgroup label="Eastern Time Zone">
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WV">West Virginia</option>
+                                </optgroup>
+                                <option value="TNOGZ" disabled="disabled">The No Optgroup Zone</option>
+                                <option value="TPZ">The Panic Zone</option>
+                                <option value="TTZ">The Twilight Zone</option>
+
+                            </select>
+
+                            <!-- <select class="js-example-basic-single" name="state" multiple="multiple">
+                        <option value="AL">Alabama</option>
+
+                        <option value="WY">Wyoming</option>
+                        <option value="WY">Wyoming</option>
+                    </select> -->
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- https://select2.github.io/select2-bootstrap-theme/4.0.3.html# -->
+        <div class="container">
+
+            <!-- custom-select2 -->
+            <!--Custom Icon ---ICOMOON -->
+            <div class="row mt-4">
+                <div class="col">
+                    <h2 class="text-primary">Custom ICOMOON Icon</h2>
+                    <span class="icon-blink-person-2"></span>
+                </div>
+            </div>
+            <!-- Start:condition: square circle -->
+            <div class="row mt-4">
+                <h2 class="col-12 text-primary d-block">Condition: Square & Circle Avatar</h2>
+                <div class="col-12 d-block">
+                    <div class="square-av"></div>
+                    <div class="circle-av"></div>
+                </div>
+
+            </div>
+
+            <!-- Start:Boxicons -->
+            <div class="row mt-4">
+                <div class="col-12 mt-6">
+                    <h2 class="text-primary">Styling Icon</h2>
+                    <span class='bx bxs-like bx-xs'></span>
+                    <span class='bx bxs-like bx-sm'></span>
+                    <span class='bx bxs-like bx-md'></span>
+                    <span class='bx bxs-like bx-lg'></span>
+                </div>
+                <div class="col-12 mt-4">
+                    <h2 class="text-primary">Rotation & Flipping</h2>
+                    <span class='bx bxs-like bx-rotate-90'></span>
+                    <span class='bx bxs-like bx-rotate-180'></span>
+                    <span class='bx bxs-like bx-rotate-270'></span>
+                    <span class='bx bxs-like bx-flip-horizontal'></span>
+                    <span class='bx bxs-like bx-flip-vertical '></span>
+                </div>
+                <div class="col-12 mt-4">
+                    <h2 class="text-primary">List Icons</h2>
+                    <ul class='bx-ul'>
+                        <li><span class='bx bx-right-arrow'></i>List Item 1</lspan>
+                        <li><span class='bx bx-x'></i>List Item 2</lspan>
+                        <li><span class='bx bx-plus'></i>List Item 3</lspan>
+                    </ul>
+                </div>
+                <div class="col-12 mt-4">
+                    <h2 class="text-primary">Border</h2>
+                    <span class='bx bxs-heart bx-border'></span>
+                    <span class='bx bxs-heart bx-border-circle'></span>
+                </div>
+                <div class="col-12 mt-4">
+                    <h2 class="text-primary">Animation</h2>
+                    <span class='bx bxs-like bx-spin'></span>
+                    <span class='bx bxs-like bx-tada'></span>
+                    <span class='bx bxs-like bx-flashing'></span>
+                    <span class='bx bxs-like bx-burst'></span>
+                    <span class='bx bxs-like bx-fade-left'></span>
+                    <span class='bx bxs-like bx-fade-right'></span>
+                    <span class='bx bxs-like bx-fade-up'></span>
+                    <span class='bx bxs-like bx-fade-down'></span>
+                </div>
+                <div class="col-12 mt-4">
+                    <h2>more style visit boxincon site: <a href="https://boxicons.com/usage/">https://boxicons.com/</a>
+                    </h2>
+                </div>
+            </div>
+            <!--Start: Buttons Style-->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h2 class="text-primary">Buttons Style</h2>
+                    <h4>Base Buttons</h4>
+                    <button type="button" class="btn btn-primary">
+                        Primary
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                        Secondary
+                    </button>
+                    <button type="button" class="btn btn-success">
+                        Success
+                    </button>
+                    <button type="button" class="btn btn-info">
+                        Info
+                    </button>
+                    <button type="button" class="btn btn-warning">
+                        Warning
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        Danger
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        Link
+                    </button>
+                </div>
+                <div class="col">
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <h4>Outline Buttons</h4>
+                    <button type="button" class="btn btn-outline-primary">
+                        Primary
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        Secondary
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                        Success
+                    </button>
+                    <button type="button" class="btn btn-outline-info">
+                        Info
+                    </button>
+                    <button type="button" class="btn btn-outline-warning">
+                        Warning
+                    </button>
+                    <button type="button" class="btn btn-outline-danger">
+                        Danger
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        Link
+                    </button>
+                </div>
+                <div class="col">
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <h4>Button Sizes</h4>
+                    <h6>Add .btn-lg or .btn-sm for additional sizes.</h6>
+                    <button type="button" class="btn btn-primary btn-lg">
+                        Primary Button Large
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        Primary Button Normal
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm">
+                        Primary Button Small
+                    </button>
+                </div>
+                <div class="col">
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <h4>Button States</h4>
+                    <h6>Add .active for active state and .disabled class or disabled="disabled" attribute</h6>
+                    <button type="button" class="btn btn-primary active">
+                        Primary Button Active States
+                    </button>
+                    <button type="button" class="btn btn-primary" disabled="">
+                        Primary Button Disabled States
+                    </button>
+                </div>
+            </div>
+            <!--End: Buttons Style-->
+            <!-- Start:DropDown -->
+            <div class="row mt-4">
+                <div class="col">
+                    <h2 class="text-primary">Dropdown Style</h2>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Start: Checkbox and radio buttons Style-->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h2 class="text-primary">Checkbox and radio buttons</h2>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked="">
+                            Active
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option2" autocomplete="off">
+                            Radio
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off">
+                            Radio
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-info">
+                            <input type="checkbox" name="options[]" id="option1" autocomplete="off" checked="">
+                            Active
+                        </label>
+                        <label class="btn btn-info active">
+                            <input type="checkbox" name="options[]" id="option2" autocomplete="off">
+                            Checkbox
+                        </label>
+                        <label class="btn btn-info">
+                            <input type="checkbox" name="options[]" id="option3" autocomplete="off">
+                            Checkbox
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--End: Checkbox and radio buttons Style-->
+            <!--Start: Css Checkbox/Radio Style-->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-primary">CSS Custom Checkbox and radio</h2>
+                    <h5>Radio</h5>
+                    <div class="custom-radio">
+                        <label for="check">
+                            <input type="radio" name="cssradio" id="check" autocomplete="off" checked="">
+                            <span></span>checked
+                        </label>
+                        <label for="Normal">
+                            <input type="radio" name="cssradio" id="Normal" autocomplete="off">
+                            <span></span>
+                            Normal
+                        </label>
+                        <label for="RadioDisabled">
+                            <input type="radio" name="cssradio" id="RadioDisabled" autocomplete="off" disabled="">
+                            <span></span>
+                            Radio Disabled
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <h5>Checkbox</h5>
+                    <div class="custom-checkbox">
+                        <label for="check1">
+                            <input type="checkbox" name="csscheckbox" id="check1" autocomplete="off" checked="">
+                            <span></span>checked
+                        </label>
+                        <label for="Normal1">
+                            <input type="checkbox" name="csscheckbox" id="Normal1" autocomplete="off">
+                            <span></span>
+                            Normal
+                        </label>
+                        <label for="checkboxDisabled1">
+                            <input type="checkbox" name="csscheckbox" id="checkboxDisabled1" autocomplete="off"
+                                disabled="">
+                            <span></span>
+                            Radio Disabled
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--End: Css Checkbox/Radio Style-->
+            <hr>
+            <!--Start: Css Switch toggle Button Style-->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-primary">Switch Toggle</h2>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="switchCheckbox">
+                        <label class="custom-control-label" for="switchCheckbox">Switch Checkbox</label>
+                    </div>
+                    <hr>
+
+                </div>
+            </div>
+            <!--End: Css Switch toggle Button Style-->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-primary">Base Form Controls</h2>
+                    <form>
+
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Email address
+                            </label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small class="form-text text-muted">
+                                We'll never share your email with anyone else.
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="example-datetime-local-input">
+                                Date and time
+                            </label>
+                            <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                id="example-datetime-local-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Password
+                            </label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Static:
+                            </label>
+                            <p class="form-control-static">
+                                email@example.com
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1">
+                                Example select
+                            </label>
+                            <select class="form-control" id="exampleSelect1">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                                <option>
+                                    3
+                                </option>
+                                <option>
+                                    4
+                                </option>
+                                <option>
+                                    5
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect2">
+                                Example multiple select
+                            </label>
+                            <select multiple="" class="form-control" id="exampleSelect2">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                                <option>
+                                    3
+                                </option>
+                                <option>
+                                    4
+                                </option>
+                                <option>
+                                    5
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea">
+                                Example textarea
+                            </label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <h5>Pure Css Select Box</h5>
+                            <label for="cssselect">Css Select</label>
+                            <div class="cssselect w-100">
+                                <select name="" id="cssselect" class="form-control">
+                                    <option value="">Test 1</option>
+                                    <option value="">Test 2</option>
+                                    <option value="">Test 3</option>
+                                    <option value="">Test 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h5>Custom File Upload</h5>
+                            <label for="cssselect">File Browser</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label selected" for="customFile"></label>
+                            </div>
+                        </div>
+                        <div class="btn-section">
+                            <button type="reset" class="btn btn-primary">
+                                Submit
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End: Main Content -->
+
+    <!-- Begin: Footer-->
+    <footer class="footer  mt-auto">
+        <div class="container">
+            <p class="text-center">&copy;1998-<script>
+                    document.write(new Date().getFullYear())
+                </script> Copyright. Indianic Infotech Ltd.</p>
+        </div>
+    </footer>
+    <!-- End: Footer-->
+
+    <!-- Bundle Scripts -->
+    <script src="assets/js/minify/javascript-lib-min.js"></script>
+</body>
+
+</html>

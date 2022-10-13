@@ -1,0 +1,72 @@
+.title-animation span {
+    display: inline-block;
+}
+
+[data-aos=scaledown],
+[data-aos=scalex] {
+    opacity: 0;
+
+}
+.title-animation span{
+    display: inline-block;
+}
+[data-aos=scaledown].aos-animate {
+    opacity: 1;
+    -webkit-animation-name: scaldown;
+    animation-name: scaldown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+[data-aos=scalex].aos-animate {
+    display: inline-block;
+    opacity: 1;
+    -webkit-animation-name: scalx;
+    animation-name: scalx;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes scalx {
+    0% {
+        transform-origin: center;
+        transform: translate3d(-30px, 20%, 180px) scale3d(1.25, 1.25, 1.5);
+    }
+
+    100% {
+        transform-origin: center;
+        transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1);
+    }
+}
+
+@keyframes scaldown {
+    0% {
+        opacity: 0.5;
+        transform-origin: center;
+        transform: translate3d(-10px, 100%, 0px) skew(20deg, 0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: center;
+        transform: translate3d(0%, 0%, 60px) skew(0deg, 0deg);
+    }
+}
+
+.outer-text {
+    display: inline-flex;
+    overflow: clip;
+}
+
+
+// imagHover
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}

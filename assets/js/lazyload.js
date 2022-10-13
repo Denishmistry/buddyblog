@@ -1,4 +1,4 @@
-
+// https://png-pixel.com/   <= base64 iimage generate
 // http://jquery.eisbehr.de/lazy/
 $("img").each(function() {
     $('body').find(this).addClass('lazy')
@@ -6,7 +6,7 @@ $("img").each(function() {
     var src1 = $this.attr("src");
     $this.attr( "data-src", src1 );
     $this.removeAttr("src");
-    $this.attr( "src","data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8sej0fwAIZQNmtvZd7gAAAABJRU5ErkJggg==" );
+    $this.attr( "src","iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8cBEAAncBow3dmKUAAAAASUVORK5CYII=");
   }); 
   
   // Slick slider
