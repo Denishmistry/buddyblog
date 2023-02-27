@@ -1,5 +1,6 @@
 // https://png-pixel.com/   <= base64 iimage generate
 // http://jquery.eisbehr.de/lazy/
+// https://www.base64-image.de/
 $("img").each(function() {
     $('body').find(this).addClass('lazy')
     var $this = $(this);
@@ -7,15 +8,15 @@ $("img").each(function() {
     $this.attr( "data-src", src1 );
     $this.removeAttr("src");
     $this.attr( "src","iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8cBEAAncBow3dmKUAAAAASUVORK5CYII=");
-  }); 
-  
+  });
+
   // Slick slider
    // $('body').find('img').addClass('lazy')
-  
+
   // lazy load
-  
+
   /* lazyload.js (c) Lorenzo Giuliani
-  
+
   MIT License (http://www.opensource.org/licenses/mit-license.html) *
   expects a list of:
   <img src="blank.gif" data-src="my_image.png" width="600" height="400" class="lazy"> */
@@ -29,7 +30,7 @@ $("img").each(function() {
             a.addRule(q,'f:b');
             for(var l=d.all,b=0,c=[],f=l.length;b<f;b++)
               l[b].currentStyle.f && c.push(l[b]);
-  
+
         a.removeRule(0);
         res = c;
       }
@@ -54,22 +55,22 @@ $("img").each(function() {
           el.parent.replaceChild(img, el)
         else
           el.src = src;
-  
+
     fn? fn() : null;
   }
   img.src = src;
     }
-  
+
     function elementInViewport(el) {
       var rect = el.getBoundingClientRect()
-  
+
   return (
      rect.top    >= 0
   && rect.left   >= 0
   && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
   )
     }
-  
+
   var images = new Array()
     , query = $q('img.lazy')
     , processScroll = function(){
@@ -82,23 +83,23 @@ $("img").each(function() {
         };
       }
     ;
-  // Array.prototype.slice.call is not callable under our lovely IE8 
+  // Array.prototype.slice.call is not callable under our lovely IE8
   for (var i = 0; i < query.length; i++) {
     images.push(query[i]);
   };
-  
+
   processScroll();
   addEventListener('scroll',processScroll);
   }(this);
-  
-  
-  
-  
-  
+
+
+
+
+
   //lazy load
   document.addEventListener("DOMContentLoaded", function() {
-    var lazyloadImages;    
-  
+    var lazyloadImages;
+
     if ("IntersectionObserver" in window) {
       lazyloadImages = document.querySelectorAll(".lazy");
       var imageObserver = new IntersectionObserver(function(entries, observer) {
@@ -110,19 +111,19 @@ $("img").each(function() {
           }
         });
       });
-  
+
   lazyloadImages.forEach(function(image) {
     imageObserver.observe(image);
   });
     } else {
       var lazyloadThrottleTimeout;
       lazyloadImages = document.querySelectorAll(".lazy");
-  
+
       function lazyload () {
         if(lazyloadThrottleTimeout) {
           clearTimeout(lazyloadThrottleTimeout);
-        }    
-  
+        }
+
     lazyloadThrottleTimeout = setTimeout(function() {
       var scrollTop = window.pageYOffset;
       lazyloadImages.forEach(function(img) {
@@ -131,17 +132,16 @@ $("img").each(function() {
             img.classList.remove('lazy');
           }
       });
-      if(lazyloadImages.length == 0) { 
+      if(lazyloadImages.length == 0) {
         document.removeEventListener("scroll", lazyload);
         window.removeEventListener("resize", lazyload);
         window.removeEventListener("orientationChange", lazyload);
       }
     }, 20);
   }
-  
+
   document.addEventListener("scroll", lazyload);
   window.addEventListener("resize", lazyload);
   window.addEventListener("orientationChange", lazyload);
     }
   })
-  
